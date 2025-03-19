@@ -1,0 +1,147 @@
+/* Custom fonts */
+@font-face {
+  font-family: satoshiRegular;
+  src: url(../fonts/Satoshi-Regular.otf);
+}
+
+@font-face {
+  font-family: satoshiItalic;
+  src: url(../fonts/Satoshi-Italic.otf);
+}
+
+@font-face {
+  font-family: satoshiBold;
+  src: url(../fonts/Satoshi-Bold.otf);
+}
+
+@font-face {
+  font-family: satoshiBlack;
+  src: url(../fonts/Satoshi-Black.otf);
+}
+
+@font-face {
+  font-family: satoshiLight;
+  src: url(../fonts/Satoshi-Light.otf);
+}
+
+@font-face {
+  font-family: satoshiLightItalic;
+  src: url(../fonts/Satoshi-LightItalic.otf);
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* Global variables */
+:root {
+  --primary: rgb(255, 255, 255);
+  --secondary: rgb(27, 27, 27);
+  --tetriary: rgb(207, 207, 207);
+  --quaternary: rgb(0, 0, 255);
+
+  --body-color-bg: var(--primary);
+  --body-color-text: var(--sedondary);
+
+  --border-color: var(--secondary);
+  --border-color-2: var(--primary);
+
+  --h1-color-bg: var(--secondary);
+  --h1-color-text: var(--primary);
+
+  --h2-color-bg: var(--secondary);
+  --h2-color-text: var(--primary);
+
+  --table-color-bg: var(--primary);
+  --table-color-text: var(--secondary);
+  --every-other-bg-color: var(--tetriary);
+
+  --footer-color-bg: var(--primary);
+  --footer-color-text: var(--secondary);
+
+  --hover-color-bg: var(--secondary);
+  --hover-color-text: var(--primary);
+
+  --hilight-color-bg: var(--quaternary);
+  --hilight-color-text: var(--primary);
+}
+
+body {
+  overscroll-behavior-y: none;
+}
+
+a {
+  color: var(--table-color-text);
+}
+
+a:hover {
+  color: var(--hover-color-text);
+  background-color: var(--hover-color-bg);
+  cursor: pointer;
+}
+
+::selection {
+  color: var(--hilight-color-text);
+  background-color: var(--hilight-color-bg);
+}
+
+::-webkit-selection {
+  color: var(--hilight-color-text);
+  background-color: var(--hilight-color-bg);
+}
+
+::-moz-selection {
+  color: var(--hilight-color-text);
+  background-color: var(--hilight-color-bg);
+}
+
+/* @media (max-width: 600px) {
+
+  html,
+  body {
+    overscroll-behavior: none;
+  }
+
+  .bookmarks {
+    width: 100%;
+  }
+
+  .expanded-content {
+    max-height: 400px;
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 14px;
+  }
+
+  h1 span {
+    height: 35px;
+  }
+
+  h2,
+  .directory {
+    font-size: 14px;
+  }
+
+  td,
+  th,
+  .project-text,
+  .caption,
+  .bio,
+  footer,
+  .cv-text,
+  .cv-title {
+    font-size: 8px;
+  }
+
+  th,
+  td {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    hyphens: auto;
+  }
+} */
