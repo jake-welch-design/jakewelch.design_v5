@@ -42,10 +42,6 @@
     width: 100%;
     z-index: 1000;
   }
-  .content-container {
-    margin: 0;
-    overflow-x: hidden;
-  }
 
   .footer-container {
     position: sticky;
