@@ -168,7 +168,7 @@ export default [
     type: 'Interactive installation',
     technologies: 'Processing, computer vision',
     description:
-      'MAACH Agency is a creative agency operating in Berlin, Germany',
+      'Designed for the inaugeral launch event of MAACH Agency, a creative agency operating in Berlin, Germany',
     iframe:
       'https://player.vimeo.com/video/897978161?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479',
     images: [
