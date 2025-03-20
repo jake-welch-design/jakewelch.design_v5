@@ -40,7 +40,11 @@
     padding: 0;
     top: 0;
     width: 100%;
-    z-index: 1000; /* Ensure the navbar is above other content */
+    z-index: 1000;
+  }
+  .content-container {
+    margin: 0;
+    overflow-x: hidden;
   }
 
   .footer-container {
