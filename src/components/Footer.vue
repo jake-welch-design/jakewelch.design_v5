@@ -14,14 +14,36 @@
           GitHub
         </a>
       </div>
-      <div class="footer-right">© 2025 Jake Welch</div>
+      <div class="footer-right">
+        <a href="#" @click.prevent="openColophon">Colophon</a>
+        © 2025 Jake Welch
+      </div>
     </div>
+    <Colophon v-if="isColophonOpen" @close="closeColophon" />
   </footer>
 </template>
 
 <script>
+  import Colophon from './Colophon.vue';
+
   export default {
     name: 'Footer',
+    components: {
+      Colophon,
+    },
+    data() {
+      return {
+        isColophonOpen: false, // Tracks whether the colophon is open
+      };
+    },
+    methods: {
+      openColophon() {
+        this.isColophonOpen = true;
+      },
+      closeColophon() {
+        this.isColophonOpen = false;
+      },
+    },
   };
 </script>
 
@@ -65,6 +87,18 @@
 
   .footer-right {
     text-align: right;
+  }
+
+  .footer-right a {
+    margin-right: 10px;
+    color: var(--footer-color-text);
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .footer-right a:hover {
+    background: var(--hover-color-bg);
+    color: var(--hover-color-text);
   }
 
   @media (max-width: 600px) {
