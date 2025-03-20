@@ -1,19 +1,3 @@
-# jakewelch.design_v5_vue
+# jakewelch.design_v5
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Rebuilt 03/19/2025 in Vue 3
