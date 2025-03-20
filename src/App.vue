@@ -43,9 +43,6 @@
     z-index: 1000; /* Ensure the navbar is above other content */
   }
 
-  /* .content-container {
-} */
-
   .footer-container {
     position: sticky;
     z-index: 1000;

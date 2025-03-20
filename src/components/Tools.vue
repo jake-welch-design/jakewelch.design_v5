@@ -3,7 +3,7 @@
     :class="{ 'project-row': true, 'clicked-row': isExpanded }"
     @click="toggleExpand"
   >
-    <td>{{ tool.name }}</td>
+    <td v-html="tool.name"></td>
     <td>{{ tool.type }}</td>
     <td>{{ tool.description }}</td>
   </tr>

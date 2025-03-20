@@ -16,7 +16,7 @@
         </div>
         <div class="resume-download">
           <a
-            href="/assets/files/WELCH_JAKE_Resume_2025_03_03.pdf"
+            href="/assets/files/WELCH_JAKE_Resume_2025_03_20.pdf"
             target="_blank"
           >
             ↳ Download my resume</a
@@ -94,6 +94,7 @@
   }
 
   .resume-download a:hover {
+    background-color: var(--primary);
     color: var(--secondary); /* Optional: Add hover effect */
   }
 

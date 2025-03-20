@@ -1,6 +1,6 @@
 export default [
   {
-    name: 'Grid Offset Collage Generator',
+    name: '↳ <a href="https://jake-welch-design.github.io/BOOK_COVER_DESIGN_TOOL/" target="_blank">Grid Offset Collage Generator</a>',
     type: 'Image manipulation',
     description:
       'Developed for designing a page insert for Ashton Reeder\n book "Fabricated Landscapes", this tool takes photo inputs, crops and adjusts them to a 11x17 format, and uses noise and wave inputs to offset grid squares to create an abstract collage.  Printing guides can be toggled for the bleed, trim, and spine.',
@@ -34,7 +34,7 @@ export default [
     ],
   },
   {
-    name: 'Glitch Type Generator',
+    name: '↳ <a href="https://jake-welch-design.github.io/Glitch_type_generator_tool/" target="_blank">Glitch Type Generator</a>',
     type: 'Typography',
     description:
       'Distorts custom text into chunks that run in random directions',
@@ -58,7 +58,7 @@ export default [
     ],
   },
   {
-    name: 'Gradient Flower Generator',
+    name: '↳ <a href="https://jake-welch-design.github.io/gradient-flower-tool/" target="_blank">Gradient Flower Generator</a>',
     type: 'Generative Graphics',
     description:
       'Generates infinite iterations of spiral "flowers" using rotating rectangles and gradients',
@@ -82,7 +82,7 @@ export default [
     ],
   },
   {
-    name: 'Noise Painting Generator',
+    name: '↳ <a href="https://jake-welch-design.github.io/noise-painting-generator/" target="_blank">Noise Painting Generator</a>',
     type: 'Image manipulation',
     description:
       'Using a noise field algorithm, this abstracts the pixels of images to create a painterly effect',
@@ -106,7 +106,7 @@ export default [
     ],
   },
   {
-    name: 'Tile Collage Generator',
+    name: '↳ <a href="https://jake-welch-design.github.io/tile-collage-generator/" target="_blank">Tile Collage Generator</a>',
     type: 'Image manipulation',
     description:
       'Takes photo inputs, divides them into a grid, and randomly rotates each square by a 90 degree increment',

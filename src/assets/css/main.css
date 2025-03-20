@@ -82,6 +82,18 @@ a:hover {
   cursor: pointer;
 }
 
+.project-row:hover,
+.clicked-row {
+  background-color: var(--hover-color-bg);
+  color: var (--hover-color-text);
+}
+
+.project-row:hover a,
+.clicked-row a {
+  background-color: var(--hover-color-bg);
+  color: var(--hover-color-text);
+}
+
 ::selection {
   color: var(--hilight-color-text);
   background-color: var(--hilight-color-bg);
