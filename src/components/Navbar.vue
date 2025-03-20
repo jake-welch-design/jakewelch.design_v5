@@ -17,7 +17,6 @@
       <!-- <a href="#gallery">EXPERIMENTS</a>  -->
       <a href="#tools">TOOLS</a>
       <a href="#about">ABOUT</a>
-      <a href="#contact">CONTACT</a>
     </div>
   </div>
 </template>
@@ -173,7 +172,7 @@ h2 {
   .bookmarks {
     display: flex;
     justify-content: space-between;
-    width: 50%;
+    width: 30%;
   }
 
   @media (max-width: 600px) {
