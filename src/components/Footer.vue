@@ -104,7 +104,7 @@
   @media (max-width: 600px) {
     .footer-content,
     .footer-left a {
-      font-size: 12px;
+      font-size: 10px;
     }
   }
 </style>

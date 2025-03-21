@@ -5,12 +5,14 @@
       <div class="text-overlay">
         <div class="project-text">
           My name is Jake Welch and I am a designer, creative technologist, and
-          generative artist living in Brooklyn, NY. I combine research and
+          generative artist living in Brooklyn, NY. I use research and
           programming to design systems which are flexible and interactive. My
-          work exists everywhere from the web, to events, to exhibitions.
+          work exists everywhere from the web, to print, to exhibitions.
           <br />
           <br />When I’m not creating something, you might find me in a museum,
-          reading a book, or snuggling up with my cat
+          <a href="https://www.goodreads.com/jakewelch" target="_blank"
+            >reading a book</a
+          >, or snuggling up with my cat
           <a href="/assets/images/pepper.jpeg" target="_blank"> Pepper</a>.
           <br /><br />
         </div>
@@ -107,6 +109,10 @@
     .project-text,
     .resume-download a {
       font-size: 12px;
+    }
+
+    .text-overlay {
+      width: 90%;
     }
 
     .background-container {
