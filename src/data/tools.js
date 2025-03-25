@@ -3,7 +3,7 @@ export default [
     name: '↳ <a href="https://restroomarchive.jakewelch.design" target="_blank">The Restroom Archive</a>',
     type: 'Archive',
     description:
-      'The Restroom Archive is an years long on-going case study which aims to document and celebrate the humorous, chaotic, and often scary nature of the public restroom.',
+      'The Restroom Archive is a years long on-going case study which aims to document and celebrate the humorous, chaotic, and often scary nature of the public restroom.',
     iframe: 'https://www.youtube.com/embed/LXDAAhHSAUs?si=ywEhnd0TJAm6NiIf',
     images: [
       {
