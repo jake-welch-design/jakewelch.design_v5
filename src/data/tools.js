@@ -1,5 +1,19 @@
 export default [
   {
+    name: '↳ <a href="https://restroomarchive.jakewelch.design" target="_blank">The Restroom Archive</a>',
+    type: 'Archive',
+    description:
+      'The Restroom Archive is an years long on-going case study which aims to document and celebrate the humorous, chaotic, and often scary nature of the public restroom.',
+    iframe: 'https://www.youtube.com/embed/LXDAAhHSAUs?si=ywEhnd0TJAm6NiIf',
+    images: [
+      {
+        src: require('@/assets/images/restroom-archive/restroom-archive-selflie.jpg'),
+        alt: 'Detail from the archive showing Jake in the mirror',
+        caption: "Detail of the restroom from 'Best Pizza', Brooklyn, NY",
+      },
+    ],
+  },
+  {
     name: '↳ <a href="https://jake-welch-design.github.io/BOOK_COVER_DESIGN_TOOL/" target="_blank">Grid Offset Collage Generator</a>',
     type: 'Image manipulation',
     description:
