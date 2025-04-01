@@ -3,9 +3,17 @@
     <span
       v-for="(char, index) in scrambledText"
       :key="index"
-      @mouseover="startScramble(index)"
-      @touchstart="startScramble(index)"
-      @touchmove="startScramble(index)"
+      :class="{ dotHover: char === '.' && hoverActive }"
+      @mouseover="
+        char === '.'
+          ? ((hoverActive = true), randomColor(index))
+          : startScramble(index)
+      "
+      @mouseleave="
+        char === '.' ? ((hoverActive = false), resetColor(index)) : null
+      "
+      @touchstart="char === '.' ? randomColor(index) : startScramble(index)"
+      @touchend="char === '.' ? resetColor(index) : null"
     >
       {{ char }}
     </span>
@@ -37,10 +45,14 @@
         scrambledText: 'JAKEWELCH.DESIGN'.split(''),
         scrambleIntervals: [],
         scrambleTimeouts: [],
+        randomColorTimeout: null,
+        randomColorInterval: null,
       };
     },
     methods: {
       startScramble(index) {
+        if (this.originalText[index] === '.') return;
+
         if (!this.scrambleIntervals[index]) {
           this.scrambleChar(index, this.originalText[index]);
         }
@@ -83,10 +95,38 @@
           const randomIndex = Math.floor(
             Math.random() * this.originalText.length
           );
+
+          if (this.originalText[randomIndex] === '.') continue;
+
           indices.add(randomIndex);
         }
 
         indices.forEach((index) => this.startScramble(index));
+      },
+      randomColor(index) {
+        this.randomColorTimeout = setTimeout(() => {
+          this.randomColorInterval = setInterval(() => {
+            const elements = document.querySelectorAll('*');
+            elements.forEach((element) => {
+              element.style.color = this.getRandomColor();
+              element.style.backgroundColor = this.getRandomColor();
+            });
+          }, 100);
+        }, 9000);
+      },
+      resetColor(index) {
+        clearTimeout(this.randomColorTimeout);
+        clearInterval(this.randomColorInterval);
+
+        const elements = document.querySelectorAll('*');
+        elements.forEach((element) => {
+          element.style.color = '';
+          element.style.backgroundColor = '';
+        });
+      },
+      getRandomColor() {
+        const randomValue = () => Math.floor(Math.random() * 256);
+        return `rgb(${randomValue()}, ${randomValue()}, ${randomValue()})`;
       },
     },
     mounted() {
@@ -129,10 +169,26 @@
     flex-grow: 1;
     flex-basis: 0;
 
+    cursor: default;
     width: calc(100% / 16);
     height: 60px;
     overflow: hidden;
   }
+
+  h1 span.dotHover {
+    color: white;
+    transition: color 9s ease-in-out;
+  }
+
+  h1 span.dotHover:hover {
+    color: rgb(255, 0, 0);
+  }
+
+  h1 span:not(.dotHover) {
+    color: white;
+    transition: none; /* Snap back instantly */
+  }
+
   /* 
 h2 {
   padding: 1vw;
