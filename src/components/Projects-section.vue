@@ -4,7 +4,7 @@
     <thead>
       <tr>
         <th>NAME</th>
-        <th>DATE</th>
+        <th>YEAR</th>
         <th>TYPE</th>
         <th>METHODS</th>
         <th>DESCRIPTION</th>

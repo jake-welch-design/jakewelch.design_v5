@@ -2,7 +2,7 @@ export default [
   {
     //LANGUAGE OF MOVEMENT
     name: 'UMOCA, Language of Movement',
-    date: '04-07/2024',
+    date: '2024',
     type: 'Art Exhibition',
     technologies:
       'p5.js, Python, computer vision, projection mapping, Premiere, After Effects, 3D printing, fabrication',
@@ -52,7 +52,7 @@ export default [
   {
     //DECLATEL
     name: 'Declatel, "Where the Pieces Came From" Album Release Show',
-    date: '02-06/2024',
+    date: '2024',
     type: 'Live concert visuals',
     technologies: 'TouchDesigner',
     description:
@@ -86,7 +86,7 @@ export default [
   {
     //FABRICATED LANDSCAPES
     name: 'Fabricated Landscapes',
-    date: '05-07/2024',
+    date: '2024',
     type: 'Book insert design',
     technologies: 'p5.js',
     description:
@@ -122,7 +122,7 @@ export default [
   {
     //ADAPTABLE AURAS
     name: 'Adaptable Auras',
-    date: '08-12/2023',
+    date: '2023',
     type: 'Interactive installation',
     technologies: 'Processing, Arduino, robotics, computer vision',
     description:
@@ -164,7 +164,7 @@ export default [
   {
     //MAACH AGENCY LAUNCH EVENT
     name: 'MAACH Agency Launch Event',
-    date: '09-10/2023',
+    date: '2023',
     type: 'Interactive installation',
     technologies: 'Processing, computer vision',
     description:
@@ -193,7 +193,7 @@ export default [
   {
     //THE FACE OF MEDIA
     name: 'The Face of Media',
-    date: '01-05/2023',
+    date: '2023',
     type: 'Interactive installation',
     technologies: 'Processing, Python, computer vision',
     description:
@@ -221,7 +221,7 @@ export default [
   {
     //DIGITAL DATA COLLECTION SPRINT
     name: 'Digital data collection sprint',
-    date: '01/2023',
+    date: '2023',
     type: 'Research',
     technologies: 'Blender, Premiere, Arduino',
     description:
@@ -248,7 +248,7 @@ export default [
   {
     //DEMO FESTIVAL
     name: 'DEMO Festival',
-    date: '10/2022',
+    date: '2022',
     type: 'Motion design',
     technologies: 'Processing',
     description:
@@ -264,7 +264,7 @@ export default [
   {
     //BODY OF LEAVES, "EQUATION" MUSIC VIDEO
     name: 'Body of Leaves, "Equation" music video',
-    date: '06-08/2022',
+    date: '2022',
     type: 'Music video',
     technologies: 'Processing, Blender, TouchDesigner, Premiere',
     description:
