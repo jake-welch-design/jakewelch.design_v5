@@ -36,6 +36,11 @@
           <br /><br />
           <div v-html="project.details"></div>
           <br /><br />
+          <!-- UNCOMMENT TO TURN ON SEE MORE BUTTONS -->
+          <!-- <router-link v-if="project.route" :to="project.route">
+            <button class="view-project-button">See more</button>
+          </router-link> -->
+          <br /><br />
           <div v-for="(link, index) in project.links" :key="index">
             <a :href="link.url" target="_blank">{{ link.text }}</a>
             <br />
@@ -221,6 +226,22 @@
     font-size: 14px;
     padding: 0.5vw;
     padding-left: 1vw;
+  }
+
+  .view-project-button {
+    cursor: pointer;
+    padding: 0 0.2vw;
+    color: var(--h2-color-text);
+    background-color: var(--h2-color-bg);
+    font-family: satoshiRegular;
+    font-size: 14px;
+    text-decoration: underline;
+    border: none;
+  }
+
+  .view-project-button:hover {
+    color: black;
+    background-color: var(--h2-color-text);
   }
 
   img {

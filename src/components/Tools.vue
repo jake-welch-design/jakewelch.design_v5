@@ -5,7 +5,7 @@
   >
     <td v-html="tool.name"></td>
     <td>{{ tool.type }}</td>
-    <td>{{ tool.description }}</td>
+    <td v-html="tool.description"></td>
   </tr>
 
   <tr class="expandable-row" v-if="isExpanded">

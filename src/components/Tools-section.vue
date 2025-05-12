@@ -1,5 +1,5 @@
 <template>
-  <h2 id="tools">TOOLS</h2>
+  <h2 id="tools">WEB TOOLS</h2>
   <table>
     <thead>
       <tr>

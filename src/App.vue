@@ -4,9 +4,7 @@
       <Navbar />
     </div>
     <div class="content-container">
-      <ProjectsSection />
-      <ToolsSection />
-      <AboutSection />
+      <router-view />
     </div>
     <div class="footer-container">
       <Footer />
@@ -16,18 +14,12 @@
 
 <script>
   import Navbar from './components/Navbar.vue';
-  import ProjectsSection from './components/Projects-section.vue';
-  import ToolsSection from './components/Tools-section.vue';
-  import AboutSection from './components/About-section.vue';
   import Footer from './components/Footer.vue';
 
   export default {
     name: 'App',
     components: {
       Navbar,
-      ProjectsSection,
-      ToolsSection,
-      AboutSection,
       Footer,
     },
   };
@@ -38,7 +30,6 @@
     position: sticky;
     top: 0;
     padding: 0;
-    top: 0;
     width: 100%;
     z-index: 1000;
   }

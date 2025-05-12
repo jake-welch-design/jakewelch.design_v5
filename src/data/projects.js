@@ -8,6 +8,7 @@ export default [
       'p5.js, Python, computer vision, projection mapping, Premiere, After Effects, 3D printing, fabrication',
     description:
       '"Language of Movement" by Milad Mozari was shown as part of the "In Memory" exhibition on view between July 2024 to February 2025 at the Utah Museum of Contemporary Art in Salt Lake City. The exhibit centered on the archives of Ghaffar Pourazar, an Azerbaijani-Iranian computer animator turned Beijing Opera performer, and his fascinating life and story.',
+    route: '/project/language-of-movement',
     images: [
       {
         src: require('@/assets/images/language-of-movement/umoca_1.jpg'),
@@ -57,6 +58,7 @@ export default [
     technologies: 'TouchDesigner',
     description:
       '"Where the Pieces Came From" is the debut album of Kevin Hartley. This album was filmed and performed to a live audience in its entirety at the historic Salt Lake City Masonic Temple on June 1, 2024.',
+    route: '/project/where-the-pieces-came-from',
     iframe: 'https://www.youtube.com/embed/xBQUv5wtHQs?si=GkNOtQ3lmfr6sUXa',
     images: [
       //   { src: require('@/assets/images/declatel-album-release/01-reprisal.gif'), alt: 'GIF of the visual for the song Reprisal', caption: 'Track 01, Reprisal' },
@@ -127,6 +129,7 @@ export default [
     technologies: 'Processing, Arduino, robotics, computer vision',
     description:
       'Adaptable Auras is an installation designed to explore & challenge the role technology plays in the tradition of art by implementing reproduction & machine learning technologies to create an art piece that is intrinsically connected to those who view it. The pen plotter receives data collected from individuals in the space using computer vision & converts that data into a unique drawing.',
+    route: '/project/adaptable-auras',
     iframe: 'https://player.vimeo.com/video/891990246?h=8ac3defae6',
     images: [
       {
@@ -198,6 +201,7 @@ export default [
     technologies: 'Processing, Python, computer vision',
     description:
       'The Face of Media is a speculative installation designed to explore machine learning as a UI tool to surpass language barriers.',
+    route: '/project/the-face-of-media',
     iframe:
       'https://player.vimeo.com/video/898173536?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479',
     images: [
@@ -226,6 +230,7 @@ export default [
     technologies: 'Blender, Premiere, Arduino',
     description:
       'A light measuring device was built & used to gather light values near bus stops in three Salt Lake City neighborhoods of varying incomes. The data was then compared, mapped, & analyzed.',
+    route: '/project/digital-data-collection',
     iframe:
       'https://www.youtube.com/embed/L1gVfEMGIRs?&loop=1&playlist=L1gVfEMGIRs&mute=1',
     images: [
