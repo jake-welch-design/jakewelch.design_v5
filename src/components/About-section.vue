@@ -9,7 +9,12 @@
           programming to design systems which are flexible and interactive. My
           work exists everywhere from the web, to print, to exhibitions.
           <br />
-          <br />When I’m not creating something, you might find me in a museum,
+          <br />When I’m not creating something, you might find me in a
+          <a
+            href="https://www.are.na/jake-welch/art-gallery-zdcjhk1yrrc"
+            target="_blank"
+            >museum</a
+          >,
           <a href="https://www.goodreads.com/jakewelch" target="_blank"
             >reading a book</a
           >, or snuggling up with my cat
@@ -17,10 +22,7 @@
           <br /><br />
         </div>
         <div class="resume-download">
-          <a
-            href="/assets/files/WELCH_JAKE_Resume_2025_03_20.pdf"
-            target="_blank"
-          >
+          <a href="/assets/files/WELCH_JAKE_Resume.pdf" target="_blank">
             ↳ Download my resume</a
           >
         </div>
