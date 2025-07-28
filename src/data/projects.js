@@ -61,15 +61,26 @@ export default [
     route: '/project/where-the-pieces-came-from',
     iframe: 'https://www.youtube.com/embed/xBQUv5wtHQs?si=GkNOtQ3lmfr6sUXa',
     images: [
-      //   { src: require('@/assets/images/declatel-album-release/01-reprisal.gif'), alt: 'GIF of the visual for the song Reprisal', caption: 'Track 01, Reprisal' },
-      //   { src: require('@/assets/images/declatel-album-release/02-our-many-ends.gif'), alt: 'GIF of the visual for the song Our Many Ends', caption: 'Track 02, Our Many Ends' },
-      //   { src: require('@/assets/images/declatel-album-release/03-where-the-pieces-came-from.gif'), alt: 'GIF of the visual for the song Where the Pieces Came From', caption: 'Track 03, Where the Pieces Came From' },
-      //   { src: require('@/assets/images/declatel-album-release/04-rag-in-the-glass.gif'), alt: 'GIF of the visual for the song Rag in the Glass', caption: 'Track 04, Rag in the Glass' },
-      //   { src: require('@/assets/images/declatel-album-release/05-modulo.gif'), alt: 'GIF of the visual for the song Modulo', caption: 'Track 05, Modulo' },
-      //   { src: require('@/assets/images/declatel-album-release/06-backlit.gif'), alt: 'GIF of the visual for the song Backlit', caption: 'Track 06 Backlit' },
-      //   { src: require('@/assets/images/declatel-album-release/07-western-eyes.gif'), alt: 'GIF of the visual for the song Western Eyes', caption: 'Track 07, Western Eyes' },
-      //   { src: require('@/assets/images/declatel-album-release/08-penny-bun.gif'), alt: 'GIF of the visual for the song Penny Bun', caption: 'Track 08, Penny Bun' },
-      //   { src: require('@/assets/images/declatel-album-release/09-start-again.gif'), alt: 'GIF of the visual for the song Start Again', caption: 'Track 09, Start Again' }
+      {
+        src: require('@/assets/images/declatel-album-release/declatel-backlit.jpg'),
+        alt: 'Still of the performance of Backlit',
+        caption: 'Track 06, Backlit',
+      },
+      {
+        src: require('@/assets/images/declatel-album-release/declatel-western-eyes.jpg'),
+        alt: 'Still of the performance of Western Eyes',
+        caption: 'Track 07, Western Eyes',
+      },
+      {
+        src: require('@/assets/images/declatel-album-release/declatel-rag-in-the-glass.jpg'),
+        alt: 'Still of the performance of Rag in the Glass',
+        caption: 'Track 04, Rag in the Glass',
+      },
+      {
+        src: require('@/assets/images/declatel-album-release/declatel-where-the-pieces-came-from.jpg'),
+        alt: 'Still of the performance of Where the Pieces Came From',
+        caption: 'Track 03, Where the Pieces Came From',
+      },
     ],
     details:
       'For this project I designed 9 unique visuals for each song on the album to be used during the live recording and album release show performed at the historic Salt Lake City Masonic Temple. I also built a custom VJing framework which included a transition visual, MIDI inputs for show controls, and DMX outputs for syncing the visuals with lights.<br><br>Each song was carefully considered and listened to for inspiration in the development process and was made to be uniquely audio-reactive to pair with the dynamics of the music.',
@@ -113,10 +124,10 @@ export default [
     details:
       'Description of the book from Ashton Reeder\'s website:<br><br><i>"In his debut book, Ashton Reeder embarks on a journey through the evolving landscapes of Asia\'s megacities. The book delves into the rapid technological transformations that shape these urban giants, with a particular focus on surveillance, density, digitization, and the relentless pace of change. Capturing fleeting moments as they dissolve into the urban fabric, offering a glimpse into the environments that are continually being redefined by societal and technological progress.<br><br>Cities pictured: Istanbul, Turkiye; Tbilisi, Georgia; Baku, Azerbaijan; Dubai, U.A.E.; Abu Dhabi, U.A.E.; Manama, Bahrain; Bangkok, Thailand; Seoul, South Korea; Tokyo, Japan; Osaka, Japan; Hong Kong, Hong Kong; Shanghai, China"</i><br><br>Working with Ashton, I used p5.js to build a flexible generative image collaging tool that could take any photograph and manipulate it in a grid pattern with noise and wave offsets to each cell. The idea was to imitate both the technological and rigid city-like patterns found throughout the book.',
     links: [
-      {
-        url: 'https://ashtonreeder.com/shop',
-        text: "↳ Buy Ashton's book here",
-      },
+      // {
+      //   url: 'https://ashtonreeder.com/shop',
+      //   text: "↳ Buy Ashton's book here",
+      // },
       { url: 'https://ashtonreeder.com/', text: "↳ See Ashton's other work" },
     ],
   },
