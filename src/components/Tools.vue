@@ -4,12 +4,13 @@
     @click="toggleExpand"
   >
     <td v-html="tool.name"></td>
+    <td>{{ tool.date }}</td>
     <td>{{ tool.type }}</td>
     <td v-html="tool.description"></td>
   </tr>
 
   <tr class="expandable-row" v-if="isExpanded">
-    <td colspan="3">
+    <td colspan="4">
       <div class="expanded-content">
         <!-- First element (iframe if exists) -->
         <div v-if="tool.iframe" class="iframe-container">

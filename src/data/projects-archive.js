@@ -307,4 +307,92 @@ export default [
       'UPHERE! Records is an independent record label & collective based in Provo, Utah. For this project, 3D graphics were designed for their Compilation Vol. 2 cassette tape to raise money for refugees of the Ukraine-Russia war. All proceeds went to Save The Children and The Ukraine Humanitarian Fund.<br><br><a href="https://uphererecords.bandcamp.com/album/uphere-compilation-vol-2" target="_blank">↳ The tape on Bandcamp</a><br><a href="https://www.instagram.com/p/Ca8H0puOTNz/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">↳ Promotional post on Instagram</a>',
     links: [],
   },
+  {
+    //DIGITAL DATA COLLECTION SPRINT
+    name: 'Digital data collection sprint',
+    date: '2023',
+    type: 'Research',
+    technologies: 'Blender, Premiere, Arduino',
+    description:
+      'A light measuring device was built & used to gather light values near bus stops in three Salt Lake City neighborhoods of varying incomes. The data was then compared, mapped, & analyzed.',
+    route: '/project/digital-data-collection',
+    iframe:
+      'https://www.youtube.com/embed/L1gVfEMGIRs?&loop=1&playlist=L1gVfEMGIRs&mute=1',
+    images: [
+      {
+        src: require('@/assets/images/digital-data-collection/ddc-01.jpg'),
+        alt: 'Data collection device in use',
+        caption: 'Data collection device in use',
+      },
+      {
+        src: require('@/assets/images/digital-data-collection/ddc-02.jpg'),
+        alt: 'Data collection device',
+        caption: 'Data collection device',
+      },
+    ],
+    details:
+      'Developed over a week long period in collaboration with classmates, the goal of this project was to use micro-controllers and electronics to gather data and conduct research. Built using an Arduino Uno R3, light sensors, various electronics, acrylic and MDF, this device helped gather arbitrary light values near bus stops. Multiple values were measured and recorded at each location and then averaged to improve accuracy and consistency. After measuring each area, it was found that the middle income neighborhood was the darkest, followed by the high income neighborhood, and the low income neighborhood was the brightest.<br><br><a href="https://www.city-data.com/income/income-Salt-Lake-City-Utah.html" target="_blank">↳ Income data map for Salt Lake City</a><br><a href="https://maps.app.goo.gl/ZsCFeAFbf34WqTDt7" target="_blank">↳ Google Maps list of bus stops analyzed</a><br><a href="https://docs.google.com/spreadsheets/d/1uQGXrNANI2xhXs3IDnFtqpM1tJHx2XcrCeCfMvokXHI/edit?usp=sharing" target="_blank">↳ Spreadsheet of the data</a>',
+    links: [],
+  },
+
+  {
+    //DEMO FESTIVAL
+    name: 'DEMO Festival',
+    date: '2022',
+    type: 'Motion design',
+    technologies: 'Processing',
+    description:
+      'Showcased during the DEMO Festival 2022, "Pixel Waves" was displayed on public screens across the Netherlands.',
+    iframe:
+      'https://www.youtube.com/embed/MV8jQ_upIQU?loop=1&playlist=MV8jQ_upIQU&mute=1',
+    images: [],
+    details:
+      'Founded by Studio Dumbar/DEPT® and Global, DEMO Festival aims to showcase the worlds best motion design by displaying the works of designers from all across the globe on more than 5000 screens across the Netherlands, including train stations, metros, shopping centers, Schiphol Airport, Eindhoven Airport and Rotterdam The Hague Airport, on billboards along major highways, and in the streets. This piece was submitted and selected to be shown as part of the event.<br><br><a href="https://demofestival.com/" target="_blank">↳ Official DEMO Festival website</a><br><a href="https://www.instagram.com/reel/CqdSsXGsrxm/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">↳ "Pixel Waves" shared to DEMO\'s Instagram</a>',
+    links: [],
+  },
+
+  {
+    //BODY OF LEAVES, "EQUATION" MUSIC VIDEO
+    name: 'Body of Leaves, "Equation" music video',
+    date: '2022',
+    type: 'Music video',
+    technologies: 'Processing, Blender, TouchDesigner, Premiere',
+    description:
+      'Made for the release of Body of Leaves\' new single \"Equation\"',
+    iframe:
+      'https://www.youtube.com/embed/j-0qkR1rvtA?loop=1&playlist=j-0qkR1rvtA&controls=0',
+    images: [],
+    details:
+      'Working closely with the band, video footage was filmed and converted into ASCII characters while additional animations were created in conjunction with collaboration Evan Pack (of Body of Leaves) using Blender and TouchDesigner.<br><br><a href="https://bodyofleaves.bandcamp.com/releases" target="_blank">↳ Body of Leaves on Bandcamp</a>',
+    links: [],
+  },
+
+  {
+    //MAACH AGENCY LAUNCH EVENT
+    name: 'MAACH Agency Launch Event',
+    date: '2023',
+    type: 'Interactive installation',
+    // technologies: 'Processing, computer vision',
+    description:
+      'Designed for the inaugeral launch event of MAACH Agency, a creative agency operating in Berlin, Germany',
+    iframe:
+      'https://player.vimeo.com/video/897978161?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479',
+    images: [
+      {
+        src: require('@/assets/images/maach/ma-01.jpg'),
+        alt: 'Installation in use 01',
+        caption: 'Installation in use 01',
+      },
+      {
+        src: require('@/assets/images/maach/ma-02.jpg'),
+        alt: 'Installation in use 02',
+        caption: 'Installation in use 02',
+      },
+    ],
+    details:
+      'A modified version of the <a href="https://www.instagram.com/reel/CthYOGqReuZ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">Saving Face</a> program, this real time interactive installation used a webcam to detect and copy the faces of attendees who approached the projection and pasted them into a grid.',
+    links: [
+      { url: 'https://www.maachagency.com/', text: '↳ MAACH Agency website' },
+    ],
+  },
 ];

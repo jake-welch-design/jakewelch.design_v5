@@ -6,12 +6,12 @@
     <td>{{ project.name }}</td>
     <td>{{ project.date }}</td>
     <td>{{ project.type }}</td>
-    <td>{{ project.technologies }}</td>
+    <!-- <td>{{ project.technologies }}</td> -->
     <td>{{ project.description }}</td>
   </tr>
 
   <tr class="expandable-row" v-if="isExpanded" ref="expandableRow">
-    <td colspan="5">
+    <td colspan="4">
       <div class="expanded-content">
         <!-- First element (iframe if exists) -->
         <div v-if="project.iframe" class="iframe-container">

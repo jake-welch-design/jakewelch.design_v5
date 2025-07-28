@@ -4,6 +4,7 @@
     <thead>
       <tr>
         <th>NAME</th>
+        <th>YEAR</th>
         <th>TYPE</th>
         <th>DESCRIPTION</th>
       </tr>

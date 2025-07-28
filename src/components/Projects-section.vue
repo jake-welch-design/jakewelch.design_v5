@@ -6,7 +6,7 @@
         <th>NAME</th>
         <th>YEAR</th>
         <th>TYPE</th>
-        <th>METHODS</th>
+        <!-- <th>METHODS</th> -->
         <th>DESCRIPTION</th>
       </tr>
     </thead>
