@@ -21,10 +21,10 @@
 
   <div class="directory">
     <div class="bookmarks">
-      <a href="#projects">PROJECTS</a>
+      <a @click="scrollToSection('projects')">PROJECTS</a>
       <!-- <a href="#gallery">EXPERIMENTS</a>  -->
-      <a href="#tools">TOOLS</a>
-      <a href="#about">ABOUT</a>
+      <a @click="scrollToSection('tools')">TOOLS</a>
+      <a @click="scrollToSection('about')">ABOUT</a>
     </div>
   </div>
 </template>
@@ -128,6 +128,35 @@
         const randomValue = () => Math.floor(Math.random() * 256);
         return `rgb(${randomValue()}, ${randomValue()}, ${randomValue()})`;
       },
+      scrollToSection(sectionId) {
+        // First navigate to main page if not already there
+        if (this.$route.path !== '/') {
+          this.$router.push('/').then(() => {
+            this.$nextTick(() => {
+              this.smoothScrollToElement(sectionId);
+            });
+          });
+        } else {
+          this.smoothScrollToElement(sectionId);
+        }
+      },
+
+      smoothScrollToElement(sectionId) {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const navbar = document.querySelector('.navbar-container');
+          const navbarHeight = navbar?.offsetHeight || 0;
+          const offset = 10; // Additional offset
+
+          const elementTop =
+            element.getBoundingClientRect().top + window.scrollY;
+
+          window.scrollTo({
+            top: elementTop - navbarHeight - offset,
+            behavior: 'smooth',
+          });
+        }
+      },
     },
     mounted() {
       this.scrambledText = this.originalText.split('');
@@ -229,6 +258,10 @@ h2 {
     display: flex;
     justify-content: space-between;
     width: 30%;
+  }
+
+  .bookmarks a {
+    cursor: pointer;
   }
 
   @media (max-width: 600px) {
