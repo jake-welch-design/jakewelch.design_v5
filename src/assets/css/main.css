@@ -111,6 +111,40 @@ a:hover {
   background-color: var(--hilight-color-bg);
 }
 
+/* Global project hover effect styles */
+body.project-hover-active * {
+  background-color: transparent !important;
+  color: white !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
+}
+
+body.project-hover-active h1,
+body.project-hover-active h2,
+body.project-hover-active th,
+body.project-hover-active td,
+body.project-hover-active div,
+body.project-hover-active span,
+body.project-hover-active a,
+body.project-hover-active p {
+  border-color: white !important;
+}
+
+body.project-hover-active table,
+body.project-hover-active th,
+body.project-hover-active td,
+body.project-hover-active h1,
+body.project-hover-active h2 {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6) !important;
+}
+
+body.project-hover-active .app-container,
+body.project-hover-active .navbar-container,
+body.project-hover-active .content-container,
+body.project-hover-active .footer-container,
+body.project-hover-active .projects-container {
+  background-color: transparent !important;
+}
+
 /* @media (max-width: 600px) {
 
   html,

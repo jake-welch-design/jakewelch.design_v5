@@ -1,25 +1,29 @@
 <template>
-  <h2 id="projects">PROJECTS</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>NAME</th>
-        <th>YEAR</th>
-        <th>TYPE</th>
-        <!-- <th>METHODS</th> -->
-        <th>DESCRIPTION</th>
-      </tr>
-    </thead>
-    <tbody>
-      <Project
-        v-for="project in projects"
-        :key="project.name"
-        :project="project"
-        :expandedProject="clickedRow"
-        @update:expandedProject="handleToggleExpand"
-      />
-    </tbody>
-  </table>
+  <div class="projects-container">
+    <h2 id="projects">PROJECTS</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>NAME</th>
+          <th>YEAR</th>
+          <th>TYPE</th>
+          <!-- <th>METHODS</th> -->
+          <th>DESCRIPTION</th>
+        </tr>
+      </thead>
+      <tbody>
+        <Project
+          v-for="project in projects"
+          :key="project.name"
+          :project="project"
+          :expandedProject="clickedRow"
+          @update:expandedProject="handleToggleExpand"
+          @project-hover="handleProjectHover"
+          @project-unhover="handleProjectUnhover"
+        />
+      </tbody>
+    </table>
+  </div>
 </template>
 
 <script>
@@ -35,17 +39,61 @@
       return {
         projects: projectData,
         clickedRow: null,
+        hoveredProject: null,
       };
+    },
+    computed: {
+      hoveredProjectImage() {
+        if (!this.hoveredProject) return null;
+        const project = this.projects.find(
+          (p) => p.name === this.hoveredProject
+        );
+        return project && project.images.length > 0
+          ? project.images[0].src
+          : null;
+      },
     },
     methods: {
       handleToggleExpand(projectName) {
         this.clickedRow = this.clickedRow === projectName ? null : projectName;
+      },
+      handleProjectHover(projectName) {
+        this.hoveredProject = projectName;
+
+        // Set global background image on the body
+        if (this.hoveredProjectImage) {
+          document.body.style.backgroundImage = `url(${this.hoveredProjectImage})`;
+          document.body.style.backgroundSize = 'cover';
+          document.body.style.backgroundPosition = 'center';
+          document.body.style.backgroundRepeat = 'no-repeat';
+          document.body.style.backgroundAttachment = 'fixed';
+
+          // Add global class for transparency effects
+          document.body.classList.add('project-hover-active');
+        }
+      },
+      handleProjectUnhover() {
+        this.hoveredProject = null;
+
+        // Remove global background image
+        document.body.style.backgroundImage = '';
+        document.body.style.backgroundSize = '';
+        document.body.style.backgroundPosition = '';
+        document.body.style.backgroundRepeat = '';
+        document.body.style.backgroundAttachment = '';
+
+        // Remove global class
+        document.body.classList.remove('project-hover-active');
       },
     },
   };
 </script>
 
 <style scoped>
+  .projects-container {
+    position: relative;
+  }
+
   h2 {
     padding: 1vw;
     margin-top: 1px;

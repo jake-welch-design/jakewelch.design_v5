@@ -2,6 +2,8 @@
   <tr
     :class="{ 'project-row': true, 'clicked-row': isExpanded }"
     @click="handleRowClick"
+    @mouseenter="handleMouseEnter"
+    @mouseleave="handleMouseLeave"
   >
     <td>{{ project.name }}</td>
     <td>{{ project.date }}</td>
@@ -109,6 +111,12 @@
             }
           }
         });
+      },
+      handleMouseEnter() {
+        this.$emit('project-hover', this.project.name);
+      },
+      handleMouseLeave() {
+        this.$emit('project-unhover');
       },
     },
   };
