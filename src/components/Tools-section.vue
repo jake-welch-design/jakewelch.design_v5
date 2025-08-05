@@ -36,9 +36,111 @@
         clickedRow: null,
       };
     },
+    mounted() {
+      // Check if the current route has a tool slug
+      if (this.$route.params.toolSlug) {
+        const toolSlug = this.$route.params.toolSlug;
+        const matchingTool = this.tools.find(
+          (tool) => this.getToolSlug(tool.name) === toolSlug
+        );
+
+        if (matchingTool) {
+          this.clickedRow = matchingTool.name;
+
+          // Wait for DOM update before scrolling
+          this.$nextTick(() => {
+            this.scrollToTool();
+          });
+        }
+      }
+    },
     methods: {
+      getToolSlug(toolName) {
+        // Remove HTML tags and convert to slug
+        const cleanName = toolName.replace(/<[^>]*>/g, '');
+        return cleanName
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, '-')
+          .replace(/-+/g, '-')
+          .replace(/^-|-$/g, '');
+      },
+
       handleToggleExpand(toolName) {
-        this.clickedRow = this.clickedRow === toolName ? null : toolName;
+        const wasExpanded = this.clickedRow === toolName;
+        this.clickedRow = wasExpanded ? null : toolName;
+
+        // Update URL
+        if (this.clickedRow) {
+          const toolSlug = this.getToolSlug(toolName);
+          this.$router.push(`/tools/${toolSlug}`);
+
+          // Auto-scroll to position clicked row under navbar after DOM update
+          this.$nextTick(() => {
+            setTimeout(() => {
+              // Find the clicked tool row
+              const toolRows = document.querySelectorAll('.project-row');
+              let clickedRow = null;
+
+              toolRows.forEach((row) => {
+                const toolNameElement = row.children[0];
+                const toolNameText =
+                  toolNameElement.textContent || toolNameElement.innerText;
+                const cleanToolName = this.clickedRow.replace(/<[^>]*>/g, '');
+                if (toolNameText === cleanToolName) {
+                  clickedRow = row;
+                }
+              });
+
+              if (clickedRow) {
+                const navbar = document.querySelector('.navbar-container');
+                const navbarHeight = navbar?.offsetHeight || 0;
+
+                const rowTop =
+                  clickedRow.getBoundingClientRect().top + window.scrollY;
+                const offset = 10; // Small offset from navbar
+
+                window.scrollTo({
+                  top: rowTop - navbarHeight - offset,
+                  behavior: 'smooth',
+                });
+              }
+            }, 150); // Slightly longer delay to ensure expansion is complete
+          });
+        } else {
+          this.$router.push('/');
+        }
+      },
+
+      scrollToTool() {
+        if (this.clickedRow) {
+          // Find the clicked tool row
+          const toolRows = document.querySelectorAll('.project-row');
+          let clickedRow = null;
+
+          toolRows.forEach((row) => {
+            const toolNameElement = row.children[0];
+            const toolNameText =
+              toolNameElement.textContent || toolNameElement.innerText;
+            const cleanToolName = this.clickedRow.replace(/<[^>]*>/g, '');
+            if (toolNameText === cleanToolName) {
+              clickedRow = row;
+            }
+          });
+
+          if (clickedRow) {
+            const navbar = document.querySelector('.navbar-container');
+            const navbarHeight = navbar?.offsetHeight || 0;
+
+            const rowTop =
+              clickedRow.getBoundingClientRect().top + window.scrollY;
+            const offset = 10; // Small offset from navbar
+
+            window.scrollTo({
+              top: rowTop - navbarHeight - offset,
+              behavior: 'smooth',
+            });
+          }
+        }
       },
     },
   };

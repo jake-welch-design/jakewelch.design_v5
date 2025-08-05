@@ -8,6 +8,11 @@ const routes = [
     component: Main,
   },
   {
+    path: '/tools/:toolSlug',
+    name: 'MainWithTool',
+    component: Main,
+  },
+  {
     path: '/:projectSlug',
     name: 'MainWithProject',
     component: Main,
