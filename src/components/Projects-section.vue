@@ -37,9 +37,113 @@
         clickedRow: null,
       };
     },
+    mounted() {
+      // Check if there's a project slug in the URL
+      const projectSlug = this.$route.params.projectSlug;
+      if (projectSlug) {
+        // Find project by slug and expand it
+        const project = this.projects.find(
+          (p) => this.getProjectSlug(p.name) === projectSlug
+        );
+        if (project) {
+          this.clickedRow = project.name;
+          // Scroll to position clicked row under navbar after expansion
+          this.$nextTick(() => {
+            setTimeout(() => {
+              // Find the clicked project row
+              const projectRows = document.querySelectorAll('.project-row');
+              let clickedRow = null;
+
+              projectRows.forEach((row) => {
+                const projectName = row.children[0].textContent;
+                if (projectName === project.name) {
+                  clickedRow = row;
+                }
+              });
+
+              if (clickedRow) {
+                const navbar = document.querySelector('.navbar-container');
+                const navbarHeight = navbar?.offsetHeight || 0;
+
+                const rowTop =
+                  clickedRow.getBoundingClientRect().top + window.scrollY;
+                const offset = 10; // Small offset from navbar
+
+                window.scrollTo({
+                  top: rowTop - navbarHeight - offset,
+                  behavior: 'smooth',
+                });
+              }
+            }, 200); // Longer delay for initial load
+          });
+        }
+      }
+    },
+    watch: {
+      '$route.params.projectSlug'(newSlug) {
+        if (newSlug) {
+          const project = this.projects.find(
+            (p) => this.getProjectSlug(p.name) === newSlug
+          );
+          if (project) {
+            this.clickedRow = project.name;
+          }
+        } else {
+          this.clickedRow = null;
+        }
+      },
+    },
     methods: {
+      getProjectSlug(projectName) {
+        return projectName
+          .toLowerCase()
+          .replace(/[^a-z0-9\s-]/g, '') // Remove special characters
+          .replace(/\s+/g, '-') // Replace spaces with dashes
+          .replace(/-+/g, '-') // Replace multiple dashes with single dash
+          .trim();
+      },
       handleToggleExpand(projectName) {
-        this.clickedRow = this.clickedRow === projectName ? null : projectName;
+        const newExpandedProject =
+          this.clickedRow === projectName ? null : projectName;
+        this.clickedRow = newExpandedProject;
+
+        // Update URL
+        if (newExpandedProject) {
+          const slug = this.getProjectSlug(newExpandedProject);
+          this.$router.push(`/${slug}`);
+
+          // Auto-scroll to position clicked row under navbar after DOM update
+          this.$nextTick(() => {
+            setTimeout(() => {
+              // Find the clicked project row
+              const projectRows = document.querySelectorAll('.project-row');
+              let clickedRow = null;
+
+              projectRows.forEach((row) => {
+                const projectName = row.children[0].textContent;
+                if (projectName === newExpandedProject) {
+                  clickedRow = row;
+                }
+              });
+
+              if (clickedRow) {
+                const navbar = document.querySelector('.navbar-container');
+                const navbarHeight = navbar?.offsetHeight || 0;
+
+                const rowTop =
+                  clickedRow.getBoundingClientRect().top + window.scrollY;
+                const offset = 10; // Small offset from navbar
+
+                window.scrollTo({
+                  top: rowTop - navbarHeight - offset,
+                  behavior: 'smooth',
+                });
+              }
+            }, 150); // Slightly longer delay to ensure expansion is complete
+          });
+        } else {
+          this.$router.push('/');
+        }
       },
     },
   };

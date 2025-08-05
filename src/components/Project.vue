@@ -90,31 +90,6 @@
       handleRowClick() {
         const newExpandedProject = this.isExpanded ? null : this.project.name;
         this.$emit('update:expandedProject', newExpandedProject);
-
-        // Auto-scroll on click
-        this.$nextTick(() => {
-          if (newExpandedProject) {
-            const expandableRow = this.$refs.expandableRow;
-            if (expandableRow) {
-              const navbar = document.querySelector('.navbar-container');
-              const navbarHeight = navbar?.offsetHeight || 0;
-
-              const contentContainer =
-                document.querySelector('.content-container');
-              const contentTop =
-                contentContainer?.getBoundingClientRect().top +
-                  window.scrollY || 0;
-
-              const rowTop =
-                expandableRow.getBoundingClientRect().top + window.scrollY;
-              const offset = 5;
-              window.scrollTo({
-                top: rowTop - contentTop - navbarHeight - offset,
-                behavior: 'smooth',
-              });
-            }
-          }
-        });
       },
     },
   };

@@ -262,6 +262,7 @@ h2 {
 
   .bookmarks a {
     cursor: pointer;
+    text-decoration: underline;
   }
 
   @media (max-width: 600px) {
