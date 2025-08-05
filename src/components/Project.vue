@@ -13,14 +13,20 @@
   <tr class="expandable-row" v-if="isExpanded" ref="expandableRow">
     <td colspan="4">
       <div class="expanded-content">
-        <!-- First element (iframe if exists) -->
-        <div v-if="project.iframe" class="iframe-container">
-          <iframe
-            :src="project.iframe"
-            frameborder="0"
-            allow="autoplay; fullscreen; picture-in-picture"
-            allowfullscreen
-          ></iframe>
+        <!-- First element (video if exists) -->
+        <div v-if="project.video" class="video-container">
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            class="project-video"
+          >
+            <source :src="project.video.webm" type="video/webm" />
+            <source :src="project.video.mp4" type="video/mp4" />
+            <img :src="project.video.poster" alt="Video not supported" />
+          </video>
         </div>
 
         <!-- First image if iframe does not exist -->
@@ -49,7 +55,7 @@
 
         <!-- Rest of the images -->
         <div
-          v-for="(image, index) in project.images.slice(project.iframe ? 0 : 1)"
+          v-for="(image, index) in project.images.slice(project.video ? 0 : 1)"
           :key="index"
           class="project-image"
         >
@@ -263,6 +269,17 @@
     left: 0;
     width: 100%;
     height: 100%;
+  }
+
+  .video-container {
+    width: 100%;
+    border: 1px solid var(--border-color-2);
+  }
+
+  .project-video {
+    width: 100%;
+    height: auto;
+    display: block;
   }
 
   .caption {

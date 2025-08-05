@@ -1,7 +1,7 @@
 export default [
   {
     //LANGUAGE OF MOVEMENT
-    name: 'UMOCA, Language of Movement',
+    name: 'Language of Movement',
     date: '2024',
     type: 'Art Exhibition',
     // technologies:
@@ -11,29 +11,39 @@ export default [
     route: '/project/language-of-movement',
     images: [
       {
-        src: require('@/assets/images/language-of-movement/umoca_1.jpg'),
+        src: require('@/assets/images/language-of-movement/lm-9.jpg'),
         alt: 'Language of Movement',
         caption: 'Language of Movement',
       },
       {
-        src: require('@/assets/images/language-of-movement/Umoca_2.jpg'),
+        src: require('@/assets/images/language-of-movement/lm-12.jpg'),
+        alt: 'Alternate angle of frame',
+        caption: 'Alternate angle of frame',
+      },
+      {
+        src: require('@/assets/images/language-of-movement/lm-13.jpg'),
         alt: 'Detail of frame',
-        caption: 'Detail of the frame',
+        caption: 'Detail of frame',
       },
       {
-        src: require('@/assets/images/language-of-movement/umoca_4.jpg'),
-        alt: 'Exhibition attendee using the VR headset',
-        caption: 'Exhibition attendee using the VR headset',
+        src: require('@/assets/images/language-of-movement/lm-7.jpg'),
+        alt: 'TV display',
+        caption: 'TV display',
       },
       {
-        src: require('@/assets/images/language-of-movement/umoca_6.jpg'),
-        alt: 'Exhibition attendee interacting with the photo table',
-        caption: 'Exhibition attendee interacting with the photo table',
+        src: require('@/assets/images/language-of-movement/lm-3.jpg'),
+        alt: 'Interactive light table display',
+        caption: 'Interactive light table display',
       },
       {
-        src: require('@/assets/images/language-of-movement/umoca_7.jpg'),
-        alt: 'Exhibition attendees',
-        caption: 'Exhibition attendees',
+        src: require('@/assets/images/language-of-movement/lm-4.jpg'),
+        alt: 'Interactive light table display detail',
+        caption: 'Interactive light table display detail',
+      },
+      {
+        src: require('@/assets/images/language-of-movement/lm-5.jpg'),
+        alt: 'Interactive light table display detail',
+        caption: 'Interactive light table display detail',
       },
     ],
     details:
@@ -52,14 +62,17 @@ export default [
 
   {
     //DECLATEL
-    name: 'Declatel, "Where the Pieces Came From" Album Release Show',
+    name: 'Declatel, Where the Pieces Came From',
     date: '2024',
-    type: 'Live concert visuals',
+    type: 'Concert visuals',
     // technologies: 'TouchDesigner',
     description:
-      '"Where the Pieces Came From" is the debut album of Kevin Hartley. This album was filmed and performed to a live audience in its entirety at the historic Salt Lake City Masonic Temple on June 1, 2024.',
+      'Where the Pieces Came From is Kevin Hartley’s debut album for his solo project Declatel. It was performed for its official album release show at the historic Salt Lake City Masonic Temple on June 1, 2024, and was debuted to a live global audience via live stream on VIERLIVE on Jul 25, 2024.',
     route: '/project/where-the-pieces-came-from',
-    iframe: 'https://www.youtube.com/embed/xBQUv5wtHQs?si=GkNOtQ3lmfr6sUXa',
+    video: {
+      mp4: require('@/assets/videos/declatel-where-the-pieces-came-from.mp4'),
+      webm: require('@/assets/videos/declatel-where-the-pieces-came-from.webm'),
+    },
     images: [
       {
         src: require('@/assets/images/declatel-album-release/declatel-backlit.jpg'),
@@ -83,11 +96,15 @@ export default [
       },
     ],
     details:
-      'For this project I designed 9 unique visuals for each song on the album to be used during the live recording and album release show performed at the historic Salt Lake City Masonic Temple. I also built a custom VJing framework which included a transition visual, MIDI inputs for show controls, and DMX outputs for syncing the visuals with lights.<br><br>Each song was carefully considered and listened to for inspiration in the development process and was made to be uniquely audio-reactive to pair with the dynamics of the music.',
+      'Designed with close consideration to the energy, lyrics, and themes of each track, nine audio reactive visuals were created for Kevin Hartley’s debut album <i>Where The Pieces Came From</i> for his solo project <i>Declatel</i>. A custom performance framework was designed and developed to interface the visuals with live audio inputs, parameter adjustments, and DMX lighting outputs to connect the visuals with the surrounding space. <br><br>The album was performed during its official album release show at the historic Salt Lake City Masonic Temple on June 1, 2024, and a recording of the performance was debuted to a live global audience via live stream through VIERLIVE on Jul 25, 2024.',
     links: [
       {
+        url: 'https://www.youtube.com/watch?v=xBQUv5wtHQs',
+        text: '↳ Watch the full performance on YouTube',
+      },
+      {
         url: 'https://declatel.bandcamp.com/',
-        text: "↳ Listen to Declatel's music here",
+        text: "↳ Listen to Declatel's music on Bandcamp",
       },
       {
         url: 'https://www.instagram.com/declatel/',
@@ -100,29 +117,39 @@ export default [
     //FABRICATED LANDSCAPES
     name: 'Fabricated Landscapes',
     date: '2024',
-    type: 'Book insert design',
+    type: 'Book design',
     // technologies: 'p5.js',
     description:
       "Fabricated Landscapes is Ashton Reeder's debut book showcasing his photography and explores the technological transformations that shape megacities throughout Asia, with a focus on surveillance, density, digitization, and the relentless pace of change.",
     images: [
+      {
+        src: require('@/assets/images/fabricated-landscapes/2.jpeg'),
+        alt: 'Design tool for Book insert design',
+        caption: 'Design tool',
+      },
+      {
+        src: require('@/assets/images/fabricated-landscapes/1.jpeg'),
+        alt: 'Insert designed by Jake Welch',
+        caption: 'Insert',
+      },
       {
         src: require('@/assets/images/fabricated-landscapes/fl-00.jpg'),
         alt: 'Detail of Fabricated Landscapes with the insert designed by Jake Welch',
         caption: 'Insert, detail',
       },
       {
-        src: require('@/assets/images/fabricated-landscapes/fl-03.png'),
-        alt: 'Insert designed by Jake Welch',
-        caption: 'Insert',
-      },
-      {
         src: require('@/assets/images/fabricated-landscapes/fl-06.png'),
         alt: 'Design tool for Book insert design',
         caption: 'Design tool',
       },
+      {
+        src: require('@/assets/images/fabricated-landscapes/fl-03.png'),
+        alt: 'Insert designed by Jake Welch',
+        caption: 'Insert',
+      },
     ],
     details:
-      'Description of the book from Ashton Reeder\'s website:<br><br><i>"In his debut book, Ashton Reeder embarks on a journey through the evolving landscapes of Asia\'s megacities. The book delves into the rapid technological transformations that shape these urban giants, with a particular focus on surveillance, density, digitization, and the relentless pace of change. Capturing fleeting moments as they dissolve into the urban fabric, offering a glimpse into the environments that are continually being redefined by societal and technological progress.<br><br>Cities pictured: Istanbul, Turkiye; Tbilisi, Georgia; Baku, Azerbaijan; Dubai, U.A.E.; Abu Dhabi, U.A.E.; Manama, Bahrain; Bangkok, Thailand; Seoul, South Korea; Tokyo, Japan; Osaka, Japan; Hong Kong, Hong Kong; Shanghai, China"</i><br><br>Working with Ashton, I used p5.js to build a flexible generative image collaging tool that could take any photograph and manipulate it in a grid pattern with noise and wave offsets to each cell. The idea was to imitate both the technological and rigid city-like patterns found throughout the book.',
+      'In collaboration with photographer, technologist, and researcher Ashton Reeder, a custom tool was designed and developed to take his photographs and reimagine them in a grid collage with each cell offset using noise and wave algorithms. The effect was designed to reflect the patterns common in city infrastructure and the rigid systems of surveillance and data that loom in the background.<br><br>Description of the book from Ashton Reeder\'s website:<br><br><i>\"In his debut book, Ashton Reeder embarks on a journey through the evolving landscapes of Asia\'s megacities. The book delves into the rapid technological transformations that shape these urban giants, with a particular focus on surveillance, density, digitization, and the relentless pace of change. Capturing fleeting moments as they dissolve into the urban fabric, offering a glimpse into the environments that are continually being redefined by societal and technological progress.<br><br>Cities pictured: Istanbul, Turkiye; Tbilisi, Georgia; Baku, Azerbaijan; Dubai, U.A.E.; Abu Dhabi, U.A.E.; Manama, Bahrain; Bangkok, Thailand; Seoul, South Korea; Tokyo, Japan; Osaka, Japan; Hong Kong, Hong Kong; Shanghai, China\"</i>',
     links: [
       // {
       //   url: 'https://ashtonreeder.com/shop',
@@ -139,14 +166,14 @@ export default [
     type: 'Interactive installation',
     // technologies: 'Processing, Arduino, robotics, computer vision',
     description:
-      'Adaptable Auras is an installation designed to explore & challenge the role technology plays in the tradition of art by implementing reproduction & machine learning technologies to create an art piece that is intrinsically connected to those who view it. The pen plotter receives data collected from individuals in the space using computer vision & converts that data into a unique drawing.',
+      'Adaptable Auras is an installation that explores the role of technology in the creation of art. It leverages common fabrication and computer vision technologies to create a drawing that is intrinsically connected to the people who view it. ',
     route: '/project/adaptable-auras',
-    iframe: 'https://player.vimeo.com/video/891990246?h=8ac3defae6',
+    // iframe: 'https://player.vimeo.com/video/891990246?h=8ac3defae6',
     images: [
       {
-        src: require('@/assets/images/adaptable-auras/aa-final-diagram.jpg'),
-        alt: 'Diagram of the final installation design',
-        caption: 'Diagram of the final installation design',
+        src: require('@/assets/images/adaptable-auras/aa-main.jpg'),
+        alt: 'Adaptable Auras installation',
+        caption: 'Adaptable Auras',
       },
       {
         src: require('@/assets/images/adaptable-auras/aa-feed.jpg'),
@@ -155,9 +182,14 @@ export default [
           'Screenshot of the data feed as displayed on the exhibition\’s monitor',
       },
       {
-        src: require('@/assets/images/adaptable-auras/aa-progress-drawing.jpg'),
+        src: require('@/assets/images/adaptable-auras/aa-progress-drawing-2.jpg'),
         alt: 'Detail of the drawing process',
         caption: 'Detail of the drawing process',
+      },
+      {
+        src: require('@/assets/images/adaptable-auras/aa-plaque.jpeg'),
+        alt: 'Detail of the exhibition plaque',
+        caption: 'Detail of the exhibition plaque',
       },
       {
         src: require('@/assets/images/adaptable-auras/aa-final-drawing.jpg'),
@@ -166,42 +198,13 @@ export default [
       },
     ],
     details:
-      'Developed during the fall 2023 Multi-Disciplinary Design senior studio in the College of Architecture and Planning at the University of Utah, this project is an art installation designed to explore and challenge the role technology and reproduction play in the creation of art.<br><br>When an artwork is reproduced, its re-contextualization alters its meaning & something special about the original is lost. With machine learning and AI image generation, art can be created, appropriated, and re-imagined by an algorithm, completely removing the role of an artist altogether. It is more important than ever to find ways to use these technologies to connect us with artwork before they remove us from it.<br><br>The installation consists of a 1369mm x 1122mm CNC pen plotter that interfaces with attendees in the exhibit space through a camera connected to a custom program. The software works to track faces in the space & draw their movements to a canvas, resulting in a web of strokes where each vertex represents an attendee who approached and viewed the installation – an art piece that is intrinsically connected to those who view it.',
+      'Designed and developed for the Fall 2023 Multi-Disciplinary Design senior studio at the University of Utah, Adaptable Auras is an installation designed to explore the role technology has in the creation and reproduction of art.<br><br>The art theorist Walter Benjamin wrote that when an artwork is reproduced, the artists original intent becomes altered and fragmented. Now with AI, art can be created, appropriated, and reimagined through an algorithm, completely removing the artist from the equation altogether. Today it is more important than ever to find ways to use these technologies to connect us with artwork rather than remove us from it.<br><br>This installation consists of a 1369mm x 1122mm CNC pen plotter that interfaces with attendees by tracking their faces with a camera and drawing a web of their movements to a canvas. No exhibition will be identical and every drawing produced will be unique to the people who viewed it that day.',
     links: [
       {
         url: 'https://www.instagram.com/p/Cz9mnxFyE8a/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
         text: '↳ See my post about the project on Instagram',
       },
     ],
-  },
-
-  {
-    //THE FACE OF MEDIA
-    name: 'The Face of Media',
-    date: '2023',
-    type: 'Interactive installation',
-    // technologies: 'Processing, Python, computer vision',
-    description:
-      'The Face of Media is a speculative installation designed to explore machine learning as a UI tool to surpass language barriers.',
-    route: '/project/the-face-of-media',
-    iframe:
-      'https://player.vimeo.com/video/898173536?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479',
-    images: [
-      {
-        src: require('@/assets/images/the-face-of-media/tfom.jpg'),
-        alt: 'Setup of the final exhibit',
-        caption: 'Setup of the final exhibit',
-      },
-      {
-        src: require('@/assets/images/the-face-of-media/tfom-02.jpg'),
-        alt: 'Attendee interacting with the exhibit with a "surprised" expression',
-        caption:
-          'Attendee interacting with the exhibit with a "surprised" expression',
-      },
-    ],
-    details:
-      'Developed during the spring 2023 Multi-Disciplinary Design junior studio in the College of Architecture and Planning at the University of Utah, this project is a speculative installation designed to explore machine learning as a UI tool to overcome language barriers. Attendees approaching the exhibit would have their face analyzed and a machine learning algorithm would determine whether their face was expressing one of seven emotions: neutral, happy, sad, anger, disgust, surprise, or fear. Based on the perceived emotion, the program would automatically play a random video clip exhibiting said emotion.<br><br>The exhibit consisted of a camera, a screen, an optional button for halting video playback, and instructions. It worked by running a facial emotion recognition (FER) algorithm consisting of a residual masking network framework and tensorflow in Python, and sending the perceived emotion to a program written in Processing via websocket that could then handle video playback. The Processing program would use this data to pick from "emotion" categories to play a random video related to the expression. Once a video would start playing, attendees could then have the option to press a green button to halt playback if desired.<br><br><a href="https://github.com/phamquiluan/ResidualMaskingNetwork/tree/master" target="_blank">↳ "Residual masking network" code by Luan Pham used in the project</a>',
-    links: [],
   },
   // Add more project objects here
 ];

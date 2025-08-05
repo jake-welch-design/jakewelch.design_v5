@@ -395,4 +395,33 @@ export default [
       { url: 'https://www.maachagency.com/', text: '↳ MAACH Agency website' },
     ],
   },
+
+  {
+    //THE FACE OF MEDIA
+    name: 'The Face of Media',
+    date: '2023',
+    type: 'Interactive installation',
+    // technologies: 'Processing, Python, computer vision',
+    description:
+      'The Face of Media is a speculative installation designed to explore machine learning as a UI tool to surpass language barriers.',
+    route: '/project/the-face-of-media',
+    iframe:
+      'https://player.vimeo.com/video/898173536?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479',
+    images: [
+      {
+        src: require('@/assets/images/the-face-of-media/tfom.jpg'),
+        alt: 'Setup of the final exhibit',
+        caption: 'Setup of the final exhibit',
+      },
+      {
+        src: require('@/assets/images/the-face-of-media/tfom-02.jpg'),
+        alt: 'Attendee interacting with the exhibit with a "surprised" expression',
+        caption:
+          'Attendee interacting with the exhibit with a "surprised" expression',
+      },
+    ],
+    details:
+      'Developed during the spring 2023 Multi-Disciplinary Design junior studio in the College of Architecture and Planning at the University of Utah, this project is a speculative installation designed to explore machine learning as a UI tool to overcome language barriers. Attendees approaching the exhibit would have their face analyzed and a machine learning algorithm would determine whether their face was expressing one of seven emotions: neutral, happy, sad, anger, disgust, surprise, or fear. Based on the perceived emotion, the program would automatically play a random video clip exhibiting said emotion.<br><br>The exhibit consisted of a camera, a screen, an optional button for halting video playback, and instructions. It worked by running a facial emotion recognition (FER) algorithm consisting of a residual masking network framework and tensorflow in Python, and sending the perceived emotion to a program written in Processing via websocket that could then handle video playback. The Processing program would use this data to pick from "emotion" categories to play a random video related to the expression. Once a video would start playing, attendees could then have the option to press a green button to halt playback if desired.<br><br><a href="https://github.com/phamquiluan/ResidualMaskingNetwork/tree/master" target="_blank">↳ "Residual masking network" code by Luan Pham used in the project</a>',
+    links: [],
+  },
 ];
