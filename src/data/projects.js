@@ -5,7 +5,7 @@ export default [
     date: '2024',
     type: 'Art Exhibition',
     description:
-      '"Language of Movement" by Milad Mozari was shown as part of the "In Memory" exhibition on view between July 2024 to February 2025 at the Utah Museum of Contemporary Art in Salt Lake City. The exhibit centered on the archives of Ghaffar Pourazar, an Azerbaijani-Iranian computer animator turned Beijing Opera performer, and his fascinating life and story.',
+      'Language of Movement by Milad Mozari, on view between July 2024 to February 2025 at the Utah Museum of Contemporary Art in Salt Lake City, traced the evolving relationship between performance, technology, and cultural exchange through decades of archival material.',
     images: [
       {
         src: require('@/assets/images/language-of-movement/lm-9.jpg'),

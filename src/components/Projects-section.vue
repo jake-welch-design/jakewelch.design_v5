@@ -151,6 +151,7 @@
 
 <style scoped>
   h2 {
+    width: calc(50% - 1px);
     padding: 1vw;
     margin-top: 1px;
     background-color: var(--h2-color-bg);
@@ -163,7 +164,8 @@
   table {
     background-color: var(--table-color-bg);
     color: var(--table-color-text);
-    width: calc(100% + 2px);
+    /* width: calc(100% + 2px); */
+    width: 50%;
     border-collapse: collapse;
     margin: -1px;
     table-layout: fixed;
