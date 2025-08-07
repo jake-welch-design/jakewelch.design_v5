@@ -12,8 +12,24 @@
   <tr class="expandable-row" v-if="isExpanded">
     <td colspan="4">
       <div class="expanded-content">
-        <!-- First element (iframe if exists) -->
-        <div v-if="tool.iframe" class="iframe-container">
+        <!-- First element (video if exists) -->
+        <div v-if="tool.video" class="video-container">
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            class="project-video"
+          >
+            <source :src="tool.video.webm" type="video/webm" />
+            <source :src="tool.video.mp4" type="video/mp4" />
+            <img :src="tool.video.poster" alt="Video not supported" />
+          </video>
+        </div>
+
+        <!-- Second element (iframe if exists and no video) -->
+        <div v-else-if="tool.iframe" class="iframe-container">
           <iframe
             :src="tool.iframe"
             frameborder="0"
@@ -22,7 +38,7 @@
           ></iframe>
         </div>
 
-        <!-- First image if iframe does not exist -->
+        <!-- First image if neither video nor iframe exists -->
         <div v-else-if="tool.images.length > 0" class="project-image">
           <img :src="tool.images[0].src" :alt="tool.images[0].alt" />
           <br />
@@ -31,7 +47,9 @@
 
         <!-- Rest of the images -->
         <div
-          v-for="(image, index) in tool.images.slice(tool.iframe ? 0 : 1)"
+          v-for="(image, index) in tool.images.slice(
+            tool.video || tool.iframe ? 0 : 1
+          )"
           :key="index"
           class="project-image"
         >
@@ -198,6 +216,17 @@
     left: 0;
     width: 100%;
     height: 100%;
+  }
+
+  .video-container {
+    width: 100%;
+    border: 1px solid var(--border-color-2);
+  }
+
+  .project-video {
+    width: 100%;
+    height: auto;
+    display: block;
   }
 
   .caption {
