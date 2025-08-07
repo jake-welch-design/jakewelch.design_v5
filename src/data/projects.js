@@ -59,11 +59,11 @@ export default [
 
   {
     //DECLATEL
-    name: 'Declatel, Where the Pieces Came From',
+    name: 'Where the Pieces Came From',
     date: '2024',
     type: 'Concert visuals',
     description:
-      "Where the Pieces Came From is Kevin Hartley's debut album for his solo project Declatel. It was performed for its official album release show at the historic Salt Lake City Masonic Temple on June 1, 2024, and was debuted to a live global audience via live stream on VIERLIVE on Jul 25, 2024.",
+      "Where the Pieces Came From is the debut album for Kevin Hartley's solo project Declatel. For the official album release show, it was performed in its entirety at the historic Salt Lake City Masonic Temple on June 1, 2024, and was debuted to a live global audience via live stream on VIERLIVE on Jul 25, 2024.",
     video: {
       mp4: require('@/assets/videos/declatel-where-the-pieces-came-from.mp4'),
       webm: require('@/assets/videos/declatel-where-the-pieces-came-from.webm'),
@@ -148,33 +148,21 @@ export default [
     type: 'Interactive installation',
     description:
       'Adaptable Auras is an installation that explores the role of technology in the creation of art. It leverages common fabrication and computer vision technologies to create a drawing that is intrinsically connected to the people who view it. ',
+    video: {
+      mp4: require('@/assets/videos/adaptable-auras.mp4'),
+      webm: require('@/assets/videos/adaptable-auras.webm'),
+    },
     images: [
-      {
-        src: require('@/assets/images/adaptable-auras/aa-main.jpg'),
-        alt: 'Adaptable Auras installation',
-        caption: 'Adaptable Auras',
-      },
-      {
-        src: require('@/assets/images/adaptable-auras/aa-feed.jpg'),
-        alt: "Screenshot of the data feed as displayed on the exhibition's monitor",
-        caption:
-          "Screenshot of the data feed as displayed on the exhibition's monitor",
-      },
-      {
-        src: require('@/assets/images/adaptable-auras/aa-progress-drawing-2.jpg'),
-        alt: 'Detail of the drawing process',
-        caption: 'Detail of the drawing process',
-      },
-      {
-        src: require('@/assets/images/adaptable-auras/aa-plaque.jpeg'),
-        alt: 'Detail of the exhibition plaque',
-        caption: 'Detail of the exhibition plaque',
-      },
-      {
-        src: require('@/assets/images/adaptable-auras/aa-final-drawing.jpg'),
-        alt: 'Final drawing created during the senior final review',
-        caption: 'Final drawing created during the senior final review',
-      },
+      // {
+      //   src: require('@/assets/images/adaptable-auras/aa-final-diagram.jpg'),
+      //   alt: 'Adaptable Auras diagram',
+      //   caption: 'Adaptable Auras diagram',
+      // },
+      // {
+      //   src: require('@/assets/images/adaptable-auras/aa-final-drawing.jpg'),
+      //   alt: 'Final Drawing of Adaptable Auras',
+      //   caption: 'Final Drawing',
+      // },
     ],
     details:
       'Designed and developed for the Fall 2023 Multi-Disciplinary Design senior studio at the University of Utah, Adaptable Auras is an installation designed to explore the role technology has in the creation and reproduction of art.<br><br>The art theorist Walter Benjamin wrote that when an artwork is reproduced, the artists original intent becomes altered and fragmented. Now with AI, art can be created, appropriated, and reimagined through an algorithm, completely removing the artist from the equation altogether. Today it is more important than ever to find ways to use these technologies to connect us with artwork rather than remove us from it.<br><br>This installation consists of a 1369mm x 1122mm CNC pen plotter that interfaces with attendees by tracking their faces with a camera and drawing a web of their movements to a canvas. No exhibition will be identical and every drawing produced will be unique to the people who viewed it that day.',
