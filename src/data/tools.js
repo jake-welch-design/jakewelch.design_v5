@@ -61,22 +61,25 @@ export default [
     type: 'Generative graphics',
     description:
       'Generates flower-like spiral motifs by rotating animated gradient slices',
-    iframe: 'https://www.youtube.com/embed/_5zNl_kH4do?si=_oKwNy9evSMsQhuT',
+    video: {
+      mp4: require('@/assets/videos/gradient-flowers.mp4'),
+      webm: require('@/assets/videos/gradient-flowers.webm'),
+    },
     images: [
       {
-        src: require('@/assets/images/gradient-flower-generator/flower-5.jpg'),
-        alt: 'Example image',
-        caption: ' ',
+        src: require('@/assets/images/gradient-flower-generator/mockups/gf-posters.jpg'),
+        alt: 'Poster mockups',
+        caption: 'Poster mockups',
       },
       {
-        src: require('@/assets/images/gradient-flower-generator/flower-1.jpg'),
-        alt: 'Example image',
-        caption: ' ',
+        src: require('@/assets/images/gradient-flower-generator/mockups/gf-shirt.jpg'),
+        alt: 'Shirt mockup',
+        caption: 'Shirt mockup',
       },
       {
-        src: require('@/assets/images/gradient-flower-generator/flower-4.jpg'),
-        alt: 'Example image',
-        caption: ' ',
+        src: require('@/assets/images/gradient-flower-generator/mockups/gf-cd.jpg'),
+        alt: 'CD mockup',
+        caption: 'CD mockup',
       },
     ],
   },
@@ -86,22 +89,25 @@ export default [
     type: 'Image manipulation',
     description:
       'Takes an image input and uses noise algorithms to distort it into a "painting"',
-    iframe: 'https://www.youtube.com/embed/BD5pm3nNMCo?si=4lc6UQTCBewahvLC',
+    video: {
+      mp4: require('@/assets/videos/noise-painting.mp4'),
+      webm: require('@/assets/videos/noise-painting.webm'),
+    },
     images: [
       {
-        src: require('@/assets/images/noise-painting-generator/painting-1jpg.jpg'),
-        alt: 'Example image',
-        caption: ' ',
+        src: require('@/assets/images/noise-painting-generator/mockups/np-billboard-1.jpg'),
+        alt: 'Billboard mockup',
+        caption: 'Billboard mockup',
       },
       {
-        src: require('@/assets/images/noise-painting-generator/painting-2.jpg'),
-        alt: 'Example image',
-        caption: ' ',
+        src: require('@/assets/images/noise-painting-generator/mockups/np-billboard-2.jpg'),
+        alt: 'Billboard mockup',
+        caption: 'Billboard mockup',
       },
       {
-        src: require('@/assets/images/noise-painting-generator/painting-3.jpg'),
-        alt: 'Example image',
-        caption: ' ',
+        src: require('@/assets/images/noise-painting-generator/mockups/np-billboard-3.jpg'),
+        alt: 'Billboard mockup',
+        caption: 'Billboard mockup',
       },
     ],
   },
@@ -111,22 +117,25 @@ export default [
     type: 'Image manipulation',
     description:
       'Takes an image input, divides it into a grid, and randomly rotates each square by a 90 degree increments to form new compositions',
-    iframe: 'https://www.youtube.com/embed/fFLzyydtWeA?si=kBADM9mIMny46r3a',
+    video: {
+      mp4: require('@/assets/videos/tiles-collage.mp4'),
+      webm: require('@/assets/videos/tiles-collage.webm'),
+    },
     images: [
       {
-        src: require('@/assets/images/tiles-collage-generator/collage-1.jpg'),
-        alt: 'Example image',
-        caption: ' ',
+        src: require('@/assets/images/tiles-collage-generator/mockups/tc-poster-1.jpg'),
+        alt: 'Poster mockup',
+        caption: 'Poster mockup',
       },
       {
-        src: require('@/assets/images/tiles-collage-generator/collage-2.jpg'),
-        alt: 'Example image',
-        caption: ' ',
+        src: require('@/assets/images/tiles-collage-generator/mockups/tc-poster-2.jpg'),
+        alt: 'Poster mockup',
+        caption: 'Poster mockup',
       },
       {
-        src: require('@/assets/images/tiles-collage-generator/collage-3.jpg'),
-        alt: 'Example image',
-        caption: ' ',
+        src: require('@/assets/images/tiles-collage-generator/mockups/tc-billboard.jpg'),
+        alt: 'Billboard mockup',
+        caption: 'Billboard mockup',
       },
     ],
   },

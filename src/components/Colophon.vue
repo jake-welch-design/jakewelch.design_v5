@@ -44,10 +44,6 @@
         a diverse array of work, I wanted my portfolio website to have the same
         ethos in being a place where my work could be organized and shared in a
         format that's simple, lightweight, and easy to navigate.
-        <br />
-        <br />
-        Send me an email or DM me on Instagram if you find any bugs, have any
-        feedback, or just want to say hello! Thank you for visiting ♥
       </div>
     </div>
   </div>

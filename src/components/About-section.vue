@@ -4,12 +4,13 @@
     <div class="background-container">
       <div class="text-overlay">
         <div class="project-text">
-          My name is Jake Welch and I am a designer, creative technologist, and
-          generative artist living in Brooklyn, NY. I use research and
-          programming to design systems which are flexible and interactive. My
-          work exists everywhere from the web, to print, to exhibitions.
+          Hi! My name is Jake, and I am a designer, creative technologist, and
+          generative artist from Salt Lake City, UT, currently living and in
+          Brooklyn, NY. I use my experience as a design researcher and creative
+          developer to create systems and experiences for humans across
+          disciplines, physical and digital.
           <br />
-          <br />When I’m not creating something, you might find me in a
+          <br />If I'm not in the weeds of a new project, you might find me in a
           <a
             href="https://www.are.na/jake-welch/art-gallery-zdcjhk1yrrc"
             target="_blank"

@@ -114,31 +114,20 @@ export default [
     type: 'Book design',
     description:
       "Fabricated Landscapes is Ashton Reeder's debut book showcasing his photography and explores the technological transformations that shape megacities throughout Asia, with a focus on surveillance, density, digitization, and the relentless pace of change.",
+    video: {
+      mp4: require('@/assets/videos/demo-landscape.mp4'),
+      webm: require('@/assets/videos/demo-landscape.webm'),
+    },
     images: [
       {
-        src: require('@/assets/images/fabricated-landscapes/2.jpeg'),
-        alt: 'Design tool for Book insert design',
-        caption: 'Design tool',
-      },
-      {
-        src: require('@/assets/images/fabricated-landscapes/1.jpeg'),
-        alt: 'Insert designed by Jake Welch',
-        caption: 'Insert',
+        src: require('@/assets/images/fabricated-landscapes/2.jpg'),
+        alt: 'Fabcricated Landscapes book',
+        caption: 'Fabcricated Landscapes book',
       },
       {
         src: require('@/assets/images/fabricated-landscapes/fl-00.jpg'),
         alt: 'Detail of Fabricated Landscapes with the insert designed by Jake Welch',
         caption: 'Insert, detail',
-      },
-      {
-        src: require('@/assets/images/fabricated-landscapes/fl-06.png'),
-        alt: 'Design tool for Book insert design',
-        caption: 'Design tool',
-      },
-      {
-        src: require('@/assets/images/fabricated-landscapes/fl-03.png'),
-        alt: 'Insert designed by Jake Welch',
-        caption: 'Insert',
       },
     ],
     details:
@@ -198,10 +187,10 @@ export default [
   },
   {
     name: 'The Restroom Archive',
-    date: '2023 - present',
+    date: 'On-going',
     type: 'Web archive',
     description:
-      'The Restroom Archive is a years long on-going case study which aims to document and celebrate the humorous, chaotic, and often scary nature of the public restroom.',
+      'The Restroom Archive is a years long case study which aims to document and celebrate the humorous, chaotic, and often scary nature of the public restroom.',
     video: {
       mp4: require('@/assets/videos/the-restroom-archive.mp4'),
       webm: require('@/assets/videos/the-restroom-archive.webm'),
