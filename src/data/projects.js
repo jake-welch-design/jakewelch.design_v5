@@ -168,8 +168,12 @@ export default [
       'Designed and developed for the Fall 2023 Multi-Disciplinary Design senior studio at the University of Utah, Adaptable Auras is an installation designed to explore the role technology has in the creation and reproduction of art.<br><br>The art theorist Walter Benjamin wrote that when an artwork is reproduced, the artists original intent becomes altered and fragmented. Now with AI, art can be created, appropriated, and reimagined through an algorithm, completely removing the artist from the equation altogether. Today it is more important than ever to find ways to use these technologies to connect us with artwork rather than remove us from it.<br><br>This installation consists of a 1369mm x 1122mm CNC pen plotter that interfaces with attendees by tracking their faces with a camera and drawing a web of their movements to a canvas. No exhibition will be identical and every drawing produced will be unique to the people who viewed it that day.',
     links: [
       {
-        url: 'https://www.instagram.com/p/Cz9mnxFyE8a/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
-        text: '↳ See my post about the project on Instagram',
+        url: '/assets/files/adaptable-auras-presentation.pdf',
+        text: '↳ View the full presentation',
+      },
+      {
+        url: 'https://www.are.na/jake-welch/senior-project-vye2i7q6yc8',
+        text: '↳ See my process for this project on Are.na',
       },
     ],
   },
