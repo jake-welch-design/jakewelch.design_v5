@@ -10,12 +10,12 @@
           developer to create systems and experiences for humans across
           disciplines, physical and digital.
           <br />
-          <br />If I'm not in the weeds of a new project, you might find me in a
+          <br />If I'm not working on a new project, you might find me in a
           <a
             href="https://www.are.na/jake-welch/art-gallery-zdcjhk1yrrc"
             target="_blank"
             >museum</a
-          >,
+          >, <a href="https://jakewel.ch" target="_blank">coding a website</a>,
           <a href="https://www.goodreads.com/jakewelch" target="_blank"
             >reading a book</a
           >, or snuggling up with my cat
