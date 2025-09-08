@@ -5,7 +5,7 @@
       <div class="text-overlay">
         <div class="project-text">
           Hi! My name is Jake, and I am a designer, creative technologist, and
-          generative artist from Salt Lake City, UT, currently living and in
+          generative artist from Salt Lake City, UT, currently living in
           Brooklyn, NY. I use my experience as a design researcher and creative
           developer to create systems and experiences for humans across
           disciplines, physical and digital.
