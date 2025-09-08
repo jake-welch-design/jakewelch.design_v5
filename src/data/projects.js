@@ -1,5 +1,56 @@
 export default [
   {
+    name: 'The Restroom Archive',
+    date: '2025 (on going)',
+    type: 'Web archive',
+    description:
+      'The Restroom Archive is a years long case study which aims to document and celebrate the humorous, chaotic, and often scary nature of the public restroom.',
+    video: {
+      mp4: require('@/assets/videos/the-restroom-archive.mp4'),
+      webm: require('@/assets/videos/the-restroom-archive.webm'),
+    },
+    images: [
+      {
+        src: require('@/assets/images/restroom-archive/ra-1.png'),
+        alt: 'Commonwealth Bar, Brooklyn, NY',
+        caption: 'Commonwealth Bar, Brooklyn, NY',
+      },
+      {
+        src: require('@/assets/images/restroom-archive/ra-2.png'),
+        alt: 'ARCO AM/PM, Barstow, CA',
+        caption: 'ARCO AM/PM, Barstow, CA',
+      },
+      {
+        src: require('@/assets/images/restroom-archive/ra-3.png'),
+        alt: "Grandpa's Bookshelf, Logan, UT",
+        caption: "Grandpa's Bookshelf, Logan, UT",
+      },
+      {
+        src: require('@/assets/images/restroom-archive/ra-4.png'),
+        alt: 'Lazy Bear Restaurant, New Castle, CO',
+        caption: 'Lazy Bear Restaurant, New Castle, CO',
+      },
+      {
+        src: require('@/assets/images/restroom-archive/ra-5.png'),
+        alt: 'Island Market, Logan, UT',
+        caption: 'Island Market, Logan, UT',
+      },
+      {
+        src: require('@/assets/images/restroom-archive/ra-6.png'),
+        alt: 'The Mart Collective, Los Angeles, CA',
+        caption: 'The Mart Collective, Los Angeles, CA',
+      },
+    ],
+    details:
+      'The Restroom Archive is an ongoing case study that aims to document and celebrate the public restroom. What started as a joke in 2023 has become a years-long practice of 3D scanning over 60 restrooms in restaurants, gas stations, convenience stores, coffee shops, and various other spaces across the U.S. and Europe. The scans are meant to capture the humorous, chaotic, and often scary nature of these uniquely private publicly accessible spaces. Through capturing the diverse decor, graffiti, and artifacts, both stored and left behind, I consider public restrooms to be a reflection of both the creativity and impertinence of human nature when we think nobody else is watching.',
+    links: [
+      {
+        url: 'https://restroomarchive.jakewelch.design',
+        text: '↳ Explore the archive here',
+      },
+    ],
+  },
+  {
     //LANGUAGE OF MOVEMENT
     name: 'Language of Movement',
     date: '2024',
@@ -174,57 +225,6 @@ export default [
       {
         url: 'https://www.are.na/jake-welch/senior-project-vye2i7q6yc8',
         text: '↳ See my process for this project on Are.na',
-      },
-    ],
-  },
-  {
-    name: 'The Restroom Archive',
-    date: 'On-going',
-    type: 'Web archive',
-    description:
-      'The Restroom Archive is a years long case study which aims to document and celebrate the humorous, chaotic, and often scary nature of the public restroom.',
-    video: {
-      mp4: require('@/assets/videos/the-restroom-archive.mp4'),
-      webm: require('@/assets/videos/the-restroom-archive.webm'),
-    },
-    images: [
-      {
-        src: require('@/assets/images/restroom-archive/ra-1.png'),
-        alt: 'Commonwealth Bar, Brooklyn, NY',
-        caption: 'Commonwealth Bar, Brooklyn, NY',
-      },
-      {
-        src: require('@/assets/images/restroom-archive/ra-2.png'),
-        alt: 'ARCO AM/PM, Barstow, CA',
-        caption: 'ARCO AM/PM, Barstow, CA',
-      },
-      {
-        src: require('@/assets/images/restroom-archive/ra-3.png'),
-        alt: "Grandpa's Bookshelf, Logan, UT",
-        caption: "Grandpa's Bookshelf, Logan, UT",
-      },
-      {
-        src: require('@/assets/images/restroom-archive/ra-4.png'),
-        alt: 'Lazy Bear Restaurant, New Castle, CO',
-        caption: 'Lazy Bear Restaurant, New Castle, CO',
-      },
-      {
-        src: require('@/assets/images/restroom-archive/ra-5.png'),
-        alt: 'Island Market, Logan, UT',
-        caption: 'Island Market, Logan, UT',
-      },
-      {
-        src: require('@/assets/images/restroom-archive/ra-6.png'),
-        alt: 'The Mart Collective, Los Angeles, CA',
-        caption: 'The Mart Collective, Los Angeles, CA',
-      },
-    ],
-    details:
-      'The Restroom Archive is an ongoing case study that aims to document and celebrate the public restroom. What started as a joke in 2023 has become a years-long practice of 3D scanning over 60 restrooms in restaurants, gas stations, convenience stores, coffee shops, and various other spaces across the U.S. and Europe. The scans are meant to capture the humorous, chaotic, and often scary nature of these uniquely private publicly accessible spaces. Through capturing the diverse decor, graffiti, and artifacts, both stored and left behind, I consider public restrooms to be a reflection of both the creativity and impertinence of human nature when we think nobody else is watching.',
-    links: [
-      {
-        url: 'https://restroomarchive.jakewelch.design',
-        text: '↳ Explore the archive here',
       },
     ],
   },
