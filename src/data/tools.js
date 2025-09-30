@@ -1,5 +1,33 @@
 export default [
   {
+    name: '↳ <a href="https://jake-welch-design.github.io/depth_collage_generator/" target="_blank">Depth Collage Generator</a>',
+    date: '2025',
+    type: 'Image manipulation',
+    description:
+      'Combines the pointcloud and depth map of two different images to create a layered 3D collage',
+    video: {
+      mp4: require('@/assets/videos/depth-collage-generator.mp4'),
+      webm: require('@/assets/videos/depth-collage-generator.webm'),
+    },
+    images: [
+      {
+        src: require('@/assets/images/depth-collage-generator/mockups/dcg-01.jpg'),
+        alt: 'Poster mockup',
+        caption: 'Poster mockup',
+      },
+      {
+        src: require('@/assets/images/depth-collage-generator/mockups/dcg-02.jpg'),
+        alt: 'Vinyl mockup',
+        caption: 'Vinyl mockup',
+      },
+      {
+        src: require('@/assets/images/depth-collage-generator/mockups/dcg-03.jpg'),
+        alt: 'Poster mockup',
+        caption: 'Poster mockup',
+      },
+    ],
+  },
+  {
     name: '↳ <a href="https://jake-welch-design.github.io/BOOK_COVER_DESIGN_TOOL/" target="_blank">Grid Offset Tool</a>',
     date: '2024',
     type: 'Image manipulation',

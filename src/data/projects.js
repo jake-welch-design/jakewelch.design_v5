@@ -1,7 +1,7 @@
 export default [
   {
     name: 'The Restroom Archive',
-    date: '2025 (on going)',
+    date: '2025 (ongoing)',
     type: 'Web archive',
     description:
       'The Restroom Archive is a years long case study which aims to document and celebrate the humorous, chaotic, and often scary nature of the public restroom.',
