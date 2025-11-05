@@ -45,7 +45,7 @@ export default [
       'The Restroom Archive is an ongoing case study that aims to document and celebrate the public restroom. What started as a joke in 2023 has become a years-long practice of 3D scanning over 60 restrooms in restaurants, gas stations, convenience stores, coffee shops, and various other spaces across the U.S. and Europe. The scans are meant to capture the humorous, chaotic, and often scary nature of these uniquely private publicly accessible spaces. Through capturing the diverse decor, graffiti, and artifacts, both stored and left behind, I consider public restrooms to be a reflection of both the creativity and impertinence of human nature when we think nobody else is watching.',
     links: [
       {
-        url: 'https://restroomarchive.jakewelch.design',
+        url: 'https://restroomarchive.com',
         text: '↳ Explore the archive here',
       },
     ],
