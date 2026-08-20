@@ -1,5 +1,50 @@
 export default [
   {
+    name: 'BASE - Live Session',
+    date: '2026',
+    type: 'Web experience',
+    description:
+      '"BASE - Live Session" is a web experience for the band Ritt Momney performing live renditions of songs from their album BASE, rendered in an interactive point cloud animation.',
+    video: {
+      mp4: require('@/assets/videos/ritt-momney-base-live.mp4'),
+      webm: require('@/assets/videos/ritt-momney-base-live.webm'),
+    },
+    images: [
+      {
+        src: require('@/assets/images/ritt-momney-base/rm-scene-1.jpg'),
+        alt: 'Scene focused on bassist with a black background and glowing red points',
+        caption: '',
+      },
+      {
+        src: require('@/assets/images/ritt-momney-base/rm-scene-2.jpg'),
+        alt: 'Scene of band with a white background, black points, and an interconnected web of lines',
+        caption: '',
+      },
+      {
+        src: require('@/assets/images/ritt-momney-base/rm-scene-3.jpg'),
+        alt: 'Scene focused on the lead singer and guitarist,red background with black points',
+        caption: '',
+      },
+      {
+        src: require('@/assets/images/ritt-momney-base/rm-scene-4.jpg'),
+        alt: 'Scene shot through the drummer of other band members, black background with glowing blue points',
+        caption: '',
+      },
+    ],
+    details:
+      "<a href=\"https://base-lidar.live\" target=\"_blank\">BASE-lidar.live</a> is an interactive web experience built for Ritt Momney's album BASE (2026). The five-song live set, recorded using LiDAR cameras, allows visitors to move through the scene and customize its aesthetics in their browser, in real time.<br><br>Built in collaboration with:<br><a href='https://www.instagram.com/saltlakejake_/' target='_blank'>Jake Reedy</a>, Creative Direction<br><a href='https://deancheesman.com/' target='_blank'>Dean Cheesman</a>, TouchDesigner<br><a href='https://newapology.com/' target='_blank'>New Apology</a>, UI Design",
+    links: [
+      {
+        url: 'https://base-lidar.live',
+        text: '↳ Explore "BASE - Live Performance" here',
+      },
+      {
+        url: 'https://www.rittmom.com/copy-of-tour',
+        text: "↳ Listen to Ritt Momney's music",
+      },
+    ],
+  },
+  {
     name: 'The Restroom Archive',
     date: '2025 (ongoing)',
     type: 'Web archive',
