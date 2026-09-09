@@ -195,24 +195,4 @@ export default [
       },
     ],
   },
-  {
-    name: '↳ <a href="https://hunteryoung.studio/i-am" target="_blank">I AM Virtual Mirror</a>',
-    date: '2022',
-    type: 'Web art',
-    description:
-      'Built for <a href="https://www.instagram.com/hunneryoung/" target="_blank">Hunter Young\'s</a> <a href="https://hunteryoung.studio/i-am-mirror" target="_blank">"I AM Mirror"</a> product release, this webpage accesses the webcam to create a virtual I AM mirror in browser.',
-    // iframe: 'https://www.youtube.com/embed/9Rz9G7R42c8?si=ds7PbTliIyFoAS7s',
-    images: [
-      {
-        src: require('@/assets/images/i-am/i-am-demo.png'),
-        alt: 'Virtual mirror with Jake in the reflection',
-        caption: ' ',
-      },
-      {
-        src: require('@/assets/images/i-am/i-am.jpg'),
-        alt: 'Virtual mirror with leaves',
-        caption: ' ',
-      },
-    ],
-  },
 ];

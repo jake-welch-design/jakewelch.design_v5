@@ -457,4 +457,24 @@ export default [
       'Developed during the spring 2023 Multi-Disciplinary Design junior studio in the College of Architecture and Planning at the University of Utah, this project is a speculative installation designed to explore machine learning as a UI tool to overcome language barriers. Attendees approaching the exhibit would have their face analyzed and a machine learning algorithm would determine whether their face was expressing one of seven emotions: neutral, happy, sad, anger, disgust, surprise, or fear. Based on the perceived emotion, the program would automatically play a random video clip exhibiting said emotion.<br><br>The exhibit consisted of a camera, a screen, an optional button for halting video playback, and instructions. It worked by running a facial emotion recognition (FER) algorithm consisting of a residual masking network framework and tensorflow in Python, and sending the perceived emotion to a program written in Processing via websocket that could then handle video playback. The Processing program would use this data to pick from "emotion" categories to play a random video related to the expression. Once a video would start playing, attendees could then have the option to press a green button to halt playback if desired.<br><br><a href="https://github.com/phamquiluan/ResidualMaskingNetwork/tree/master" target="_blank">↳ "Residual masking network" code by Luan Pham used in the project</a>',
     links: [],
   },
+  {
+    name: '↳ <a href="https://hunteryoung.studio/i-am" target="_blank">I AM Virtual Mirror</a>',
+    date: '2022',
+    type: 'Web art',
+    description:
+      'Built for <a href="https://www.instagram.com/hunneryoung/" target="_blank">Hunter Young\'s</a> <a href="https://hunteryoung.studio/i-am-mirror" target="_blank">"I AM Mirror"</a> product release, this webpage accesses the webcam to create a virtual I AM mirror in browser.',
+    // iframe: 'https://www.youtube.com/embed/9Rz9G7R42c8?si=ds7PbTliIyFoAS7s',
+    images: [
+      {
+        src: require('@/assets/images/i-am/i-am-demo.png'),
+        alt: 'Virtual mirror with Jake in the reflection',
+        caption: ' ',
+      },
+      {
+        src: require('@/assets/images/i-am/i-am.jpg'),
+        alt: 'Virtual mirror with leaves',
+        caption: ' ',
+      },
+    ],
+  },
 ];
