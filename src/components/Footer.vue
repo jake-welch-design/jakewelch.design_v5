@@ -16,7 +16,7 @@
       </div>
       <div class="footer-right">
         <a href="#" @click.prevent="openColophon">Colophon</a>
-        © 2025 Jake Welch
+        © 2026 Jake Welch
       </div>
     </div>
     <Colophon v-if="isColophonOpen" @close="closeColophon" />
