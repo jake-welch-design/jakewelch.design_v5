@@ -147,7 +147,7 @@
   td {
     font-family: var(--font-sans);
     font-weight: 400;
-    font-size: 14px;
+    font-size: 12px;
     padding: 0.5vw;
     padding-left: 1vw;
   }
@@ -217,7 +217,7 @@
   .project-text {
     font-family: var(--font-sans);
     font-weight: 400;
-    font-size: 14px;
+    font-size: 12px;
     padding: 0.5vw;
     padding-left: 1vw;
   }
@@ -229,7 +229,7 @@
     background-color: var(--h2-color-bg);
     font-family: var(--font-sans);
     font-weight: 400;
-    font-size: 14px;
+    font-size: 12px;
     text-decoration: underline;
     border: none;
   }
@@ -274,7 +274,7 @@
   .caption {
     font-family: var(--font-sans);
     font-style: italic;
-    font-size: 12px;
+    font-size: 10px;
     text-align: left;
   }
 

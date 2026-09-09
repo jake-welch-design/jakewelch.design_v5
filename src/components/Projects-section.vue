@@ -170,7 +170,7 @@
     color: var(--h2-color-text);
     font-family: var(--font-sans);
     font-weight: 700;
-    font-size: 16px;
+    font-size: 14px;
     text-align: left;
   }
 
@@ -188,7 +188,7 @@
     font-family: var(--font-sans);
     /* Regular, matching the body rows; th defaults to bold. */
     font-weight: 400;
-    font-size: 14px;
+    font-size: 12px;
     padding: 0.5vw;
     padding-left: 1vw;
   }
@@ -238,7 +238,7 @@
   td {
     font-family: var(--font-sans);
     font-weight: 400;
-    font-size: 14px;
+    font-size: 12px;
     padding: 0.5vw;
     padding-left: 1vw;
   }

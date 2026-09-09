@@ -90,7 +90,7 @@
     color: var(--h2-color-text);
     font-family: var(--font-sans);
     font-weight: 700;
-    font-size: 16px;
+    font-size: 14px;
     text-align: left;
   }
 
@@ -120,7 +120,7 @@
   .colophon-content {
     font-family: var(--font-sans);
     font-weight: 400;
-    font-size: 14px;
+    font-size: 12px;
     padding: 1vw;
     padding-left: 1vw;
   }

@@ -65,7 +65,7 @@
 
     font-family: var(--font-sans);
     font-weight: 400;
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .footer-content {
@@ -78,7 +78,7 @@
     margin-right: 15px;
     color: var(--footer-color-text);
     text-decoration: underline;
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .footer-left a:hover {

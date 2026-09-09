@@ -229,7 +229,7 @@ h2 {
 
   font-family: var(--font-sans);
   font-weight: 700;
-  font-size: 16px;
+  font-size: 14px;
   text-align: left;
 } */
 
@@ -253,7 +253,7 @@ h2 {
 
     font-family: var(--font-sans);
     font-weight: 700;
-    font-size: 16px;
+    font-size: 14px;
     text-align: left;
   }
 

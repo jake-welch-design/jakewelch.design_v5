@@ -44,7 +44,7 @@
 
     font-family: var(--font-sans);
     font-weight: 700;
-    font-size: 16px;
+    font-size: 14px;
     text-align: left;
   }
 
@@ -53,7 +53,7 @@
   }
 
   .text-overlay .project-text a {
-    font-size: 16px;
+    font-size: 14px;
     color: var(--primary);
   }
 
@@ -88,14 +88,14 @@
   .project-text {
     font-family: var(--font-sans);
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.5;
   }
 
   .resume-download a {
     font-family: var(--font-sans);
     font-weight: 400;
-    font-size: 18px;
+    font-size: 16px;
     text-decoration: none;
     background-color: var(--secondary);
     color: var(--primary);
