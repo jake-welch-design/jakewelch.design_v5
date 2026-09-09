@@ -38,7 +38,7 @@
 
         <!-- Project info (details and links) -->
         <div class="project-text">
-          <b>DETAILS:</b>
+          <b>Details_</b>
           <br /><br />
           <div v-html="project.details"></div>
           <br /><br />
