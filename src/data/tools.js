@@ -4,7 +4,7 @@ export default [
     date: '2025',
     type: 'Collage',
     description:
-      'Inspired by the "Cinetizations" of Pol Bury, this tool takes an image and distorts it with a series of rotated radial cuts',
+      'Inspired by the "Cinetizations" of Pol Bury, this tool takes an image and distorts it with a series of rotated radial cuts<br>Featured in <a href="https://www.slanted.de/news/digital-tools” target="_blank">slanted #47 digital tools</a>',
     video: {
       mp4: require('@/assets/videos/cinetizer-tool.mp4'),
       webm: require('@/assets/videos/cinetizer-tool.webm'),
@@ -32,7 +32,7 @@ export default [
     date: '2025',
     type: 'Collage',
     description:
-      'Combines the pointcloud and depth map of two different images to create a layered 3D collage',
+      'Combines the pointcloud and depth map of two different images to create a layered 3D collage<br>Featured in <a href="https://www.slanted.de/news/digital-tools” target="_blank">slanted #47 digital tools</a>',
     video: {
       mp4: require('@/assets/videos/depth-collage-generator.mp4'),
       webm: require('@/assets/videos/depth-collage-generator.webm'),
@@ -60,7 +60,7 @@ export default [
     date: '2024',
     type: 'Collage',
     description:
-      'Built for the design of <a href="https://www.instagram.com/ashreeder/" target="_blank">Ashton Reeder\'s</a> book <i>Fabricated Landscapes</i></a>, this tool takes an image input, divides it into a grid, and uses noise and wave algorithms to offset each of the cells. ',
+      'Built for the design of <a href="https://www.instagram.com/ashreeder/" target="_blank">Ashton Reeder\'s</a> book <i>Fabricated Landscapes</i></a>, this tool takes an image input, divides it into a grid, and uses noise and wave algorithms to offset each of the cells. <br>Featured in <a href="https://www.slanted.de/news/digital-tools” target="_blank">slanted #47 digital tools</a>',
     video: {
       mp4: require('@/assets/videos/demo-landscape.mp4'),
       webm: require('@/assets/videos/demo-landscape.webm'),
@@ -88,7 +88,7 @@ export default [
     date: '2024',
     type: 'Typography manipulation',
     description:
-      'Divides text into chunks that run in random directions disitorting the letterforms',
+      'Divides text into chunks that run in random directions disitorting the letterforms<br>Featured in <a href="https://www.slanted.de/news/digital-tools” target="_blank">slanted #47 digital tools</a>',
     video: {
       mp4: require('@/assets/videos/type-runners.mp4'),
       webm: require('@/assets/videos/type-runners.webm'),
@@ -116,7 +116,7 @@ export default [
     date: '2024',
     type: 'Graphics',
     description:
-      'Generates flower-like spiral motifs by rotating animated gradient slices',
+      'Generates flower-like spiral motifs by rotating animated gradient slices <br>Featured in <a href="https://www.slanted.de/news/digital-tools” target="_blank">slanted #47 digital tools</a>',
     video: {
       mp4: require('@/assets/videos/gradient-flowers.mp4'),
       webm: require('@/assets/videos/gradient-flowers.webm'),
@@ -144,7 +144,7 @@ export default [
     date: '2024',
     type: 'Image manipulation',
     description:
-      'Takes an image input and uses noise algorithms to distort it into a "painting"',
+      'Takes an image input and uses noise algorithms to distort it into a "painting"<br>Featured in <a href="https://www.slanted.de/news/digital-tools” target="_blank">slanted #47 digital tools</a>',
     video: {
       mp4: require('@/assets/videos/noise-painting.mp4'),
       webm: require('@/assets/videos/noise-painting.webm'),

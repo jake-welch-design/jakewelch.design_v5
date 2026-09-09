@@ -49,7 +49,7 @@ export default [
     date: '2025 (ongoing)',
     type: 'Web archive',
     description:
-      'The Restroom Archive is a years long case study which aims to document and celebrate the humorous, chaotic, and often scary nature of the public restroom.',
+      'The Restroom Archive is an ongoing repository of publicly accessible restrooms.',
     video: {
       mp4: require('@/assets/videos/the-restroom-archive.mp4'),
       webm: require('@/assets/videos/the-restroom-archive.webm'),

@@ -289,5 +289,30 @@
       white-space: normal;
       hyphens: auto;
     }
+
+    /* Collapse the YEAR and TYPE columns, splitting the table
+       evenly between NAME and DESCRIPTION. The td rules need :deep()
+       because the body cells are rendered by the Project component. */
+    th:nth-child(2),
+    th:nth-child(3),
+    table :deep(td:nth-child(2)),
+    table :deep(td:nth-child(3)) {
+      display: none;
+    }
+
+    /* Set from JS to the longest name across the projects and tools
+       tables, so the two line up. DESCRIPTION takes the remainder. */
+    th:first-child,
+    table :deep(td:first-child) {
+      width: var(--name-col-width, 50%);
+    }
+
+    /* DESCRIPTION must be auto, not 50%: with both columns given an
+       explicit width their sum falls short of the table, and fixed layout
+       shares the leftover back out, re-inflating NAME to half. */
+    th:last-child,
+    table :deep(td:last-child) {
+      width: auto;
+    }
   }
 </style>
