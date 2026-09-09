@@ -73,6 +73,26 @@ export default [
     ],
   },
   {
+    name: 'Butter Video',
+    date: '2026',
+    type: 'Generative motion components',
+    description:
+      'Butter is the first video editor you can build on. Motion components are designed with parametric elements to allow for deep customization. This allows creatives to build and remix custom design tools right on timeline.',
+    video: {
+      mp4: require('@/assets/videos/butter-video.mp4'),
+      webm: require('@/assets/videos/butter-video.webm'),
+    },
+    images: [],
+    details:
+      "Working closely with the team at Butter, I expand their library of motion components by coding templates for everything from interactive UI elements, custom portfolio highlights, typographic animations, generative backgrounds, and more. These components allow users to customize the graphics within set constraints. Components can be used to create custom video compositions in Butter's own timeline.",
+    links: [
+      {
+        url: 'https://butter.video',
+        text: '↳ Check out Butter here',
+      },
+    ],
+  },
+  {
     //LANGUAGE OF MOVEMENT
     name: 'Language of Movement',
     date: '2024',
