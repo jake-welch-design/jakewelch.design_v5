@@ -2,7 +2,7 @@
   <div class="colophon-overlay" @click="close">
     <div class="colophon-popup" @click.stop>
       <button class="close-btn" @click="close">x</button>
-      <h2>COLOPHON</h2>
+      <h2>Colophon</h2>
       <div class="colophon-content">
         This site was built from scratch using native HTML/CSS/JS in 2024 and
         rebuilt with Vue 3 in 2025. It is currently hosted on
@@ -15,14 +15,12 @@
         out my code and use it to create something yourself.
         <br />
         <br />
-        <b>FONT:</b>
-        <br /><a href="https://www.fontshare.com/fonts/satoshi" target="_blank"
-          >'Satoshi' by Indian Type Foundry</a
-        >
+        <b>Font_</b>
+        <br />'Arial' by Monotype
         <br />
         <br />
         <br />
-        <b>COLOR PALETTE:</b>
+        <b>Color palette_</b>
         <br />
         <div class="color-palette">
           <div class="primary-color">(#FFFFFF)</div>
@@ -36,14 +34,14 @@
         <br />
         <br />
         <br />
-        <b>APROACH:</b>
+        <b>Design approach_</b>
         <br />
-        In developing this site, I was inspired by the simplicity and efficacy
-        of HTML tables as a native built-in method for categorizing and
-        organizing information on the web. As a multi-disciplinary designer with
-        a diverse array of work, I wanted my portfolio website to have the same
-        ethos in being a place where my work could be organized and shared in a
-        format that's simple, lightweight, and easy to navigate.
+        In building this site, I was inspired by the simplicity and efficacy of
+        HTML tables as a native built-in method for categorizing and organizing
+        information on the web. As a multi-disciplinary designer with a diverse
+        array of work, I wanted my portfolio website to have the same ethos in
+        being a place where my work could be organized and shared in a format
+        that's simple, lightweight, and easy to navigate.
       </div>
     </div>
   </div>
@@ -90,8 +88,9 @@
     padding: 1vw;
     background-color: var(--h2-color-bg);
     color: var(--h2-color-text);
-    font-family: satoshiBold;
-    font-size: 18px;
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: 16px;
     text-align: left;
   }
 
@@ -119,14 +118,16 @@
   }
 
   .colophon-content {
-    font-family: satoshiRegular;
+    font-family: var(--font-sans);
+    font-weight: 400;
     font-size: 14px;
     padding: 1vw;
     padding-left: 1vw;
   }
 
   .close-btn {
-    font-family: satoshiRegular;
+    font-family: var(--font-sans);
+    font-weight: 400;
     position: absolute;
     top: 0.5vw;
     right: 1vw;
@@ -140,5 +141,17 @@
   .close-btn:hover {
     background-color: white;
     color: var(--secondary);
+  }
+
+  @media (max-width: 600px) {
+    /* Same reason as the tables: the vw padding leaves the popup text almost
+       flush with its edges at this width. */
+    h2 {
+      padding: 8px 14px;
+    }
+
+    .colophon-content {
+      padding: 12px 14px;
+    }
   }
 </style>

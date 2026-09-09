@@ -63,7 +63,8 @@
 
     border: 1px solid var(--border-color);
 
-    font-family: satoshiRegular;
+    font-family: var(--font-sans);
+    font-weight: 400;
     font-size: 14px;
   }
 
@@ -105,6 +106,11 @@
     .footer-content,
     .footer-left a {
       font-size: 10px;
+    }
+
+    footer {
+      padding-top: 8px;
+      padding-bottom: 8px;
     }
   }
 </style>

@@ -12,7 +12,7 @@
   import ProjectsSection from '@/components/Projects-section.vue';
   import ToolsSection from '@/components/Tools-section.vue';
   import AboutSection from '@/components/About-section.vue';
-  import { watchNameColumnWidth } from '@/utils/nameColumnWidth.js';
+  import { watchColumnWidths } from '@/utils/columnWidths.js';
 
   export default {
     name: 'Main',
@@ -22,11 +22,12 @@
       AboutSection,
     },
     mounted() {
-      // Sizes the NAME column of both tables to the longest name in either.
-      this.stopNameColumnWidth = watchNameColumnWidth();
+      // Sizes the NAME and YEAR columns of both tables to the widest value in
+      // either, so the two tables line up.
+      this.stopColumnWidths = watchColumnWidths();
     },
     unmounted() {
-      this.stopNameColumnWidth?.();
+      this.stopColumnWidths?.();
     },
   };
 </script>

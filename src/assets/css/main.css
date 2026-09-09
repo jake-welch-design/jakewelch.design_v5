@@ -1,34 +1,3 @@
-/* Custom fonts */
-@font-face {
-  font-family: satoshiRegular;
-  src: url(../fonts/Satoshi-Regular.otf);
-}
-
-@font-face {
-  font-family: satoshiItalic;
-  src: url(../fonts/Satoshi-Italic.otf);
-}
-
-@font-face {
-  font-family: satoshiBold;
-  src: url(../fonts/Satoshi-Bold.otf);
-}
-
-@font-face {
-  font-family: satoshiBlack;
-  src: url(../fonts/Satoshi-Black.otf);
-}
-
-@font-face {
-  font-family: satoshiLight;
-  src: url(../fonts/Satoshi-Light.otf);
-}
-
-@font-face {
-  font-family: satoshiLightItalic;
-  src: url(../fonts/Satoshi-LightItalic.otf);
-}
-
 * {
   margin: 0;
   box-sizing: border-box;
@@ -37,6 +6,10 @@
 
 /* Global variables */
 :root {
+  /* Site font. Weight and style are set per rule rather than by picking a
+     face, so the stack is the single place the typeface changes. */
+  --font-sans: Arial, Helvetica, sans-serif;
+
   --primary: rgb(255, 255, 255);
   --secondary: rgb(27, 27, 27);
   --tetriary: rgb(207, 207, 207);
@@ -72,6 +45,7 @@ body {
   overscroll-behavior-y: none;
   margin: 0;
   overflow-x: hidden;
+  font-family: var(--font-sans);
 }
 
 a {

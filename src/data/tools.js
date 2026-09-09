@@ -2,9 +2,9 @@ export default [
   {
     name: '↳ <a href="https://jake-welch-design.github.io/cinetiser-tool/" target="_blank">Cinetizer Tool</a>',
     date: '2025',
-    type: 'Collage',
+    type: 'Image manipulation',
     description:
-      'Inspired by the "Cinetizations" of Pol Bury, this tool takes an image and distorts it with a series of rotated radial cuts<br>Featured in <a href="https://www.slanted.de/news/digital-tools” target="_blank">slanted #47 digital tools</a>',
+      'Inspired by the "Cinetizations" of Pol Bury, this tool takes an image and distorts it with a series of rotated radial cuts<br>Featured in <a href="https://www.slanted.de/news/digital-tools" target="_blank">slanted #47 digital tools</a>',
     video: {
       mp4: require('@/assets/videos/cinetizer-tool.mp4'),
       webm: require('@/assets/videos/cinetizer-tool.webm'),
@@ -32,7 +32,7 @@ export default [
     date: '2025',
     type: 'Collage',
     description:
-      'Combines the pointcloud and depth map of two different images to create a layered 3D collage<br>Featured in <a href="https://www.slanted.de/news/digital-tools” target="_blank">slanted #47 digital tools</a>',
+      'Combines the pointcloud and depth map of two different images to create a layered 3D collage<br>Featured in <a href="https://www.slanted.de/news/digital-tools" target="_blank">slanted #47 digital tools</a>',
     video: {
       mp4: require('@/assets/videos/depth-collage-generator.mp4'),
       webm: require('@/assets/videos/depth-collage-generator.webm'),
@@ -58,9 +58,9 @@ export default [
   {
     name: '↳ <a href="https://jake-welch-design.github.io/BOOK_COVER_DESIGN_TOOL/" target="_blank">Grid Offset Tool</a>',
     date: '2024',
-    type: 'Collage',
+    type: 'Image manipulation',
     description:
-      'Built for the design of <a href="https://www.instagram.com/ashreeder/" target="_blank">Ashton Reeder\'s</a> book <i>Fabricated Landscapes</i></a>, this tool takes an image input, divides it into a grid, and uses noise and wave algorithms to offset each of the cells. <br>Featured in <a href="https://www.slanted.de/news/digital-tools” target="_blank">slanted #47 digital tools</a>',
+      'Built for the design of <a href="https://www.instagram.com/ashreeder/" target="_blank">Ashton Reeder\'s</a> book <i>Fabricated Landscapes</i></a>, this tool takes an image input, divides it into a grid, and uses noise and wave algorithms to offset each of the cells. <br>Featured in <a href="https://www.slanted.de/news/digital-tools" target="_blank">slanted #47 digital tools</a>',
     video: {
       mp4: require('@/assets/videos/demo-landscape.mp4'),
       webm: require('@/assets/videos/demo-landscape.webm'),
@@ -88,7 +88,7 @@ export default [
     date: '2024',
     type: 'Typography manipulation',
     description:
-      'Divides text into chunks that run in random directions disitorting the letterforms<br>Featured in <a href="https://www.slanted.de/news/digital-tools” target="_blank">slanted #47 digital tools</a>',
+      'Divides text into chunks that run in random directions disitorting the letterforms<br>Featured in <a href="https://www.slanted.de/news/digital-tools" target="_blank">slanted #47 digital tools</a>',
     video: {
       mp4: require('@/assets/videos/type-runners.mp4'),
       webm: require('@/assets/videos/type-runners.webm'),
@@ -114,9 +114,9 @@ export default [
   {
     name: '↳ <a href="https://jake-welch-design.github.io/gradient-flower-tool/" target="_blank">Gradient Flower Generator</a>',
     date: '2024',
-    type: 'Graphics',
+    type: 'Graphics generation',
     description:
-      'Generates flower-like spiral motifs by rotating animated gradient slices <br>Featured in <a href="https://www.slanted.de/news/digital-tools” target="_blank">slanted #47 digital tools</a>',
+      'Generates flower-like spiral motifs by rotating animated gradient slices <br>Featured in <a href="https://www.slanted.de/news/digital-tools" target="_blank">slanted #47 digital tools</a>',
     video: {
       mp4: require('@/assets/videos/gradient-flowers.mp4'),
       webm: require('@/assets/videos/gradient-flowers.webm'),
@@ -144,7 +144,7 @@ export default [
     date: '2024',
     type: 'Image manipulation',
     description:
-      'Takes an image input and uses noise algorithms to distort it into a "painting"<br>Featured in <a href="https://www.slanted.de/news/digital-tools” target="_blank">slanted #47 digital tools</a>',
+      'Takes an image input and uses noise algorithms to distort it into a "painting"<br>Featured in <a href="https://www.slanted.de/news/digital-tools" target="_blank">slanted #47 digital tools</a>',
     video: {
       mp4: require('@/assets/videos/noise-painting.mp4'),
       webm: require('@/assets/videos/noise-painting.webm'),
@@ -170,7 +170,7 @@ export default [
   {
     name: '↳ <a href="https://jake-welch-design.github.io/tile-collage-generator/" target="_blank">Tile Collage Tool</a>',
     date: '2024',
-    type: 'Collage',
+    type: 'Image manipulation',
     description:
       'Takes an image input, divides it into a grid, and randomly rotates each square by a 90 degree increments to form new compositions',
     video: {

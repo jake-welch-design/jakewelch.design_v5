@@ -1,14 +1,13 @@
 <template>
-  <h2 id="about" class="about">ABOUT</h2>
+  <h2 id="about" class="about">About</h2>
   <div class="about-me">
     <div class="background-container">
       <div class="text-overlay">
         <div class="project-text">
-          Hi! My name is Jake, and I am a designer, creative technologist, and
-          generative artist from Salt Lake City, UT, currently living in
+          I'm Jake, a designer, creative technologist, and artist based in
           Brooklyn, NY. I use my experience as a design researcher and creative
-          developer to create systems and experiences for humans across
-          disciplines, physical and digital.
+          developer to build systems and experiences for humans across
+          disciplines, both physical and digital.
           <br />
           <br />If I'm not working on a new project, you might find me in a
           <a
@@ -43,8 +42,9 @@
     background-color: var(--h2-color-bg);
     color: var(--h2-color-text);
 
-    font-family: satoshiBold;
-    font-size: 18px;
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: 16px;
     text-align: left;
   }
 
@@ -86,17 +86,20 @@
   }
 
   .project-text {
-    font-family: satoshiRegular;
+    font-family: var(--font-sans);
+    font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
   }
 
   .resume-download a {
-    font-family: satoshiRegular;
-    font-size: 16px;
+    font-family: var(--font-sans);
+    font-weight: 400;
+    font-size: 18px;
     text-decoration: none;
     background-color: var(--secondary);
     color: var(--primary);
+    padding: 4px 8px;
   }
 
   .resume-download a:hover {
@@ -106,13 +109,18 @@
 
   @media (max-width: 600px) {
     h2 {
-      font-size: 14px;
+      font-size: 12px;
+      padding: 8px 14px;
     }
 
     .text-overlay .project-text a,
-    .project-text,
-    .resume-download a {
+    .project-text {
       font-size: 12px;
+    }
+
+    /* Sits one step above the bio, the way it does on desktop. */
+    .resume-download a {
+      font-size: 14px;
     }
 
     .text-overlay {

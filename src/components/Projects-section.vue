@@ -1,13 +1,13 @@
 <template>
-  <h2 id="projects">PROJECTS</h2>
-  <table>
+  <h2 id="projects">Projects</h2>
+  <table ref="table">
     <thead>
       <tr>
-        <th>NAME</th>
-        <th>YEAR</th>
-        <th>TYPE</th>
+        <th>Year_</th>
+        <th>Name_</th>
+        <th>Type_</th>
         <!-- <th>METHODS</th> -->
-        <th>DESCRIPTION</th>
+        <th>Description_</th>
       </tr>
     </thead>
     <tbody>
@@ -25,6 +25,10 @@
 <script>
   import Project from './Project.vue';
   import projectData from '@/data/projects.js';
+  import {
+    fitExpandedRow,
+    watchExpandedRow,
+  } from '@/utils/expandedRowHeight.js';
 
   export default {
     name: 'ProjectsSection',
@@ -38,6 +42,10 @@
       };
     },
     mounted() {
+      // An expanded row is sized to the window, so it has to be re-sized
+      // whenever the window changes.
+      this.stopExpandedRowWatch = watchExpandedRow(() => this.$refs.table);
+
       // Check if there's a project slug in the URL
       const projectSlug = this.$route.params.projectSlug;
       if (projectSlug) {
@@ -49,13 +57,14 @@
           this.clickedRow = project.name;
           // Scroll to position clicked row under navbar after expansion
           this.$nextTick(() => {
+            fitExpandedRow(this.$refs.table);
             setTimeout(() => {
               // Find the clicked project row
               const projectRows = document.querySelectorAll('.project-row');
               let clickedRow = null;
 
               projectRows.forEach((row) => {
-                const projectName = row.children[0].textContent;
+                const projectName = row.querySelector('.name-cell').textContent;
                 if (projectName === project.name) {
                   clickedRow = row;
                 }
@@ -78,6 +87,9 @@
           });
         }
       }
+    },
+    unmounted() {
+      this.stopExpandedRowWatch?.();
     },
     watch: {
       '$route.params.projectSlug'(newSlug) {
@@ -114,13 +126,14 @@
 
           // Auto-scroll to position clicked row under navbar after DOM update
           this.$nextTick(() => {
+            fitExpandedRow(this.$refs.table);
             setTimeout(() => {
               // Find the clicked project row
               const projectRows = document.querySelectorAll('.project-row');
               let clickedRow = null;
 
               projectRows.forEach((row) => {
-                const projectName = row.children[0].textContent;
+                const projectName = row.querySelector('.name-cell').textContent;
                 if (projectName === newExpandedProject) {
                   clickedRow = row;
                 }
@@ -155,8 +168,9 @@
     margin-top: 1px;
     background-color: var(--h2-color-bg);
     color: var(--h2-color-text);
-    font-family: satoshiBold;
-    font-size: 18px;
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: 16px;
     text-align: left;
   }
 
@@ -171,8 +185,10 @@
 
   th {
     text-align: left;
-    font-family: satoshiBold;
-    font-size: 16px;
+    font-family: var(--font-sans);
+    /* Regular, matching the body rows; th defaults to bold. */
+    font-weight: 400;
+    font-size: 14px;
     padding: 0.5vw;
     padding-left: 1vw;
   }
@@ -180,6 +196,15 @@
   th:last-child,
   td:last-child {
     width: 50%;
+  }
+
+  /* YEAR leads the table at a width that hugs its four digits, measured in
+     JS so both tables agree. NAME and TYPE share what DESCRIPTION leaves.
+     Scoped to .project-row so an expanded row's cell, which is the first
+     child of its own row, keeps the full width. */
+  th:first-child,
+  table :deep(.project-row td:first-child) {
+    width: var(--year-col-width, 9ch);
   }
 
   tr:not(.exclude):not(:has(th)):hover
@@ -211,7 +236,8 @@
   }
 
   td {
-    font-family: satoshiRegular;
+    font-family: var(--font-sans);
+    font-weight: 400;
     font-size: 14px;
     padding: 0.5vw;
     padding-left: 1vw;
@@ -272,7 +298,8 @@
     }
 
     h2 {
-      font-size: 14px;
+      font-size: 12px;
+      padding: 8px 14px;
     }
 
     td,
@@ -280,6 +307,13 @@
     .project-text,
     .caption {
       font-size: 10px;
+      /* The vw padding collapses to a couple of px at this width, so the cells
+         are given real room in px instead, matching the ~14px gutter 1vw gives
+         the desktop layout. */
+      padding-top: 8px;
+      padding-bottom: 8px;
+      padding-left: 14px;
+      padding-right: 14px;
     }
 
     th,
@@ -290,20 +324,20 @@
       hyphens: auto;
     }
 
-    /* Collapse the YEAR and TYPE columns, splitting the table
-       evenly between NAME and DESCRIPTION. The td rules need :deep()
-       because the body cells are rendered by the Project component. */
-    th:nth-child(2),
+    /* Collapse the YEAR and TYPE columns, leaving the table to NAME and
+       DESCRIPTION. The td rules need :deep() because the body cells are
+       rendered by the Project component. */
+    th:first-child,
     th:nth-child(3),
-    table :deep(td:nth-child(2)),
-    table :deep(td:nth-child(3)) {
+    table :deep(.project-row td:first-child),
+    table :deep(.project-row td:nth-child(3)) {
       display: none;
     }
 
     /* Set from JS to the longest name across the projects and tools
        tables, so the two line up. DESCRIPTION takes the remainder. */
-    th:first-child,
-    table :deep(td:first-child) {
+    th:nth-child(2),
+    table :deep(.project-row td:nth-child(2)) {
       width: var(--name-col-width, 50%);
     }
 
@@ -311,7 +345,7 @@
        explicit width their sum falls short of the table, and fixed layout
        shares the leftover back out, re-inflating NAME to half. */
     th:last-child,
-    table :deep(td:last-child) {
+    table :deep(.project-row td:last-child) {
       width: auto;
     }
   }

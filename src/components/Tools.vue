@@ -3,14 +3,14 @@
     :class="{ 'project-row': true, 'clicked-row': isExpanded }"
     @click="toggleExpand"
   >
-    <td v-html="tool.name"></td>
     <td>{{ tool.date }}</td>
+    <td class="name-cell" v-html="tool.name"></td>
     <td>{{ tool.type }}</td>
     <td v-html="tool.description"></td>
   </tr>
 
   <tr class="expandable-row" v-if="isExpanded">
-    <td colspan="4">
+    <td :colspan="expandedColspan">
       <div class="expanded-content">
         <!-- First element (video if exists) -->
         <div v-if="tool.video" class="video-container">
@@ -63,6 +63,8 @@
 </template>
 
 <script>
+  import { visibleColumnCount } from '@/utils/visibleColumns.js';
+
   export default {
     name: 'Tools',
     props: {
@@ -75,6 +77,12 @@
         required: true,
       },
     },
+    computed: {
+      // Only the columns still on screen, so the expanded row can't add any.
+      expandedColspan() {
+        return visibleColumnCount.value;
+      },
+    },
     methods: {
       toggleExpand() {
         this.$emit('toggle-expand', this.tool.name);
@@ -85,7 +93,8 @@
 
 <style scoped>
   b {
-    font-family: satoshiBold;
+    font-family: var(--font-sans);
+    font-weight: 700;
   }
 
   th:last-child,
@@ -126,7 +135,8 @@
   }
 
   td {
-    font-family: satoshiRegular;
+    font-family: var(--font-sans);
+    font-weight: 400;
     font-size: 14px;
     padding: 0.5vw;
     padding-left: 1vw;
@@ -161,9 +171,13 @@
     background-color: var(--table-color-bg);
     color: var(--table-color-text);
     padding: 20px;
-    max-height: 67vh;
+    /* Set from JS to the space left between the navbar and the footer: a row
+       with more content than that fills the window and scrolls inside itself,
+       leaving the next row above the footer, while a short one keeps to its
+       content. The fallback applies before the measurement lands. */
+    max-height: var(--expanded-row-height, 67vh);
     overflow: -moz-scrollbars-vertical;
-    overflow-y: scroll;
+    overflow-y: auto;
     overflow-x: hidden;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -191,7 +205,8 @@
   }
 
   .project-text {
-    font-family: satoshiRegular;
+    font-family: var(--font-sans);
+    font-weight: 400;
     font-size: 14px;
     padding: 0.5vw;
     padding-left: 1vw;
@@ -230,22 +245,39 @@
   }
 
   .caption {
-    font-family: satoshiItalic;
+    font-family: var(--font-sans);
+    font-style: italic;
     font-size: 12px;
     text-align: left;
   }
 
   @media (max-width: 600px) {
+    /* The panel carries the gutter itself, at the same 14px as the rows
+       above it, so its own text blocks sit flush with its edges instead of
+       adding a second inset. */
     .expanded-content {
-      max-height: 400px;
+      max-height: var(--expanded-row-height, 400px);
       grid-template-columns: 1fr;
+      padding: 14px;
+      gap: 14px;
     }
 
     td,
-    th,
+    th {
+      font-size: 10px;
+      /* The vw padding collapses to a couple of px at this width, so the cells
+         are given real room in px instead, matching the ~14px gutter 1vw gives
+         the desktop layout. */
+      padding-top: 8px;
+      padding-bottom: 8px;
+      padding-left: 14px;
+      padding-right: 14px;
+    }
+
     .project-text,
     .caption {
       font-size: 10px;
+      padding: 0;
     }
 
     th,

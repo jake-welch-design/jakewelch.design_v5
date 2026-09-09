@@ -1,5 +1,38 @@
 export default [
   {
+    //FABRICATED LANDSCAPES
+    name: 'Fabricated Landscapes',
+    date: '2024',
+    type: 'Book design',
+    description:
+      "Fabricated Landscapes is Ashton Reeder's debut book showcasing his photography and explores the technological transformations that shape megacities throughout Asia, with a focus on surveillance, density, digitization, and the relentless pace of change.",
+    video: {
+      mp4: require('@/assets/videos/demo-landscape.mp4'),
+      webm: require('@/assets/videos/demo-landscape.webm'),
+    },
+    images: [
+      {
+        src: require('@/assets/images/fabricated-landscapes/2.jpg'),
+        alt: 'Fabcricated Landscapes book',
+        caption: 'Fabcricated Landscapes book',
+      },
+      {
+        src: require('@/assets/images/fabricated-landscapes/fl-00.jpg'),
+        alt: 'Detail of Fabricated Landscapes with the insert designed by Jake Welch',
+        caption: 'Insert, detail',
+      },
+    ],
+    details:
+      'In collaboration with photographer, technologist, and researcher Ashton Reeder, a custom tool was designed and developed to take his photographs and reimagine them in a grid collage with each cell offset using noise and wave algorithms. The effect was designed to reflect the patterns common in city infrastructure and the rigid systems of surveillance and data that loom in the background.<br><br>Description of the book from Ashton Reeder\'s website:<br><br><i>"In his debut book, Ashton Reeder embarks on a journey through the evolving landscapes of Asia\'s megacities. The book delves into the rapid technological transformations that shape these urban giants, with a particular focus on surveillance, density, digitization, and the relentless pace of change. Capturing fleeting moments as they dissolve into the urban fabric, offering a glimpse into the environments that are continually being redefined by societal and technological progress.<br><br>Cities pictured: Istanbul, Turkiye; Tbilisi, Georgia; Baku, Azerbaijan; Dubai, U.A.E.; Abu Dhabi, U.A.E.; Manama, Bahrain; Bangkok, Thailand; Seoul, South Korea; Tokyo, Japan; Osaka, Japan; Hong Kong, Hong Kong; Shanghai, China"</i>',
+    links: [
+      // {
+      //   url: 'https://ashtonreeder.com/shop',
+      //   text: "↳ Buy Ashton's book here",
+      // },
+      { url: 'https://ashtonreeder.com/', text: "↳ See Ashton's other work" },
+    ],
+  },
+  {
     //AUSTIN AUBRY PHOTO
     name: 'austinaubry.photo',
     date: 'Spring 2024',

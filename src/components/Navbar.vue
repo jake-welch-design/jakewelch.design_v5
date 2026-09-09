@@ -21,10 +21,10 @@
 
   <div class="directory">
     <div class="bookmarks">
-      <a @click="scrollToSection('projects')">PROJECTS</a>
+      <a @click="scrollToSection('projects')">Projects</a>
       <!-- <a href="#gallery">EXPERIMENTS</a>  -->
-      <a @click="scrollToSection('tools')">TOOLS</a>
-      <a @click="scrollToSection('about')">ABOUT</a>
+      <a @click="scrollToSection('tools')">Tools</a>
+      <a @click="scrollToSection('about')">About</a>
     </div>
   </div>
 </template>
@@ -177,7 +177,8 @@
     background-color: var(--h1-color-bg);
     color: var(--h1-color-text);
 
-    font-family: satoshiBold;
+    font-family: var(--font-sans);
+    font-weight: 700;
     font-size: 30px;
 
     display: flex;
@@ -226,8 +227,9 @@ h2 {
   background-color: var(--h2-color-bg);
   color: var(--h2-color-text);
 
-  font-family: satoshiBold;
-  font-size: 18px;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 16px;
   text-align: left;
 } */
 
@@ -249,8 +251,9 @@ h2 {
     color: var(--table-color-text);
     border: 1px solid var(--border-color);
 
-    font-family: satoshiBold;
-    font-size: 18px;
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: 16px;
     text-align: left;
   }
 
@@ -280,7 +283,8 @@ h2 {
 
     h2,
     .directory {
-      font-size: 14px;
+      font-size: 12px;
+      padding: 8px 14px;
     }
 
     th,

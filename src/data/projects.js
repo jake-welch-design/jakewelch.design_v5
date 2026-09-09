@@ -1,8 +1,36 @@
 export default [
   {
+    name: 'The Restroom Archive',
+    date: '2026',
+    type: 'Digital archive',
+    description:
+      'The Restroom Archive is an ongoing repository of publicly accessible restrooms.',
+    video: {
+      mp4: require('@/assets/videos/the-restroom-archive.mp4'),
+      webm: require('@/assets/videos/the-restroom-archive.webm'),
+    },
+    images: [],
+    details:
+      '<a href="https://restroomarchive.com" target="_blank">The Restroom Archive</a> is an ongoing repository of publicly accessible restrooms. Now supporting a user base of more than 300 archivists and annotators, this archive aims to document the diverse qualities of these unique spaces. Everyone uses restrooms, yet as spaces, they are considered taboo and are rarely considered. Perhaps no space in society better captures the creativity and impertinence of humans when they know nobody else is watching.<br><br>The site was designed using the same conventions used for accessible public signage, and employs the same language found in web archives maintained by museums and libraries. The site’s navigation was built to encourage exploration and for users to make connections and observations. Users with accounts can click directly on restrooms to leave annotations and can request an upgrade to Archivist status to submit their own restroom scans for inclusion in the archive.',
+    links: [
+      {
+        url: 'https://restroomarchive.com',
+        text: '↳ Explore the archive here',
+      },
+      {
+        url: 'https://www.404media.co/the-man-on-a-quest-to-digitally-preserve-americas-public-restrooms/',
+        text: '↳ Read my interview with 404 Media',
+      },
+      {
+        url: 'https://news.ycombinator.com/item?id=49517624',
+        text: '↳ Read the discussion about the Archive on Hacker News',
+      },
+    ],
+  },
+  {
     name: 'BASE - Live Session',
     date: '2026',
-    type: 'Web experience',
+    type: 'Interactive web performance',
     description:
       '"BASE - Live Session" is a web experience for the band Ritt Momney performing live renditions of songs from their album BASE, rendered in an interactive point cloud animation.',
     video: {
@@ -45,61 +73,10 @@ export default [
     ],
   },
   {
-    name: 'The Restroom Archive',
-    date: '2025 (ongoing)',
-    type: 'Web archive',
-    description:
-      'The Restroom Archive is an ongoing repository of publicly accessible restrooms.',
-    video: {
-      mp4: require('@/assets/videos/the-restroom-archive.mp4'),
-      webm: require('@/assets/videos/the-restroom-archive.webm'),
-    },
-    images: [
-      {
-        src: require('@/assets/images/restroom-archive/ra-1.png'),
-        alt: 'Commonwealth Bar, Brooklyn, NY',
-        caption: 'Commonwealth Bar, Brooklyn, NY',
-      },
-      {
-        src: require('@/assets/images/restroom-archive/ra-2.png'),
-        alt: 'ARCO AM/PM, Barstow, CA',
-        caption: 'ARCO AM/PM, Barstow, CA',
-      },
-      {
-        src: require('@/assets/images/restroom-archive/ra-3.png'),
-        alt: "Grandpa's Bookshelf, Logan, UT",
-        caption: "Grandpa's Bookshelf, Logan, UT",
-      },
-      {
-        src: require('@/assets/images/restroom-archive/ra-4.png'),
-        alt: 'Lazy Bear Restaurant, New Castle, CO',
-        caption: 'Lazy Bear Restaurant, New Castle, CO',
-      },
-      {
-        src: require('@/assets/images/restroom-archive/ra-5.png'),
-        alt: 'Island Market, Logan, UT',
-        caption: 'Island Market, Logan, UT',
-      },
-      {
-        src: require('@/assets/images/restroom-archive/ra-6.png'),
-        alt: 'The Mart Collective, Los Angeles, CA',
-        caption: 'The Mart Collective, Los Angeles, CA',
-      },
-    ],
-    details:
-      'The Restroom Archive is an ongoing case study that aims to document and celebrate the public restroom. What started as a joke in 2023 has become a years-long practice of 3D scanning over 60 restrooms in restaurants, gas stations, convenience stores, coffee shops, and various other spaces across the U.S. and Europe. The scans are meant to capture the humorous, chaotic, and often scary nature of these uniquely private publicly accessible spaces. Through capturing the diverse decor, graffiti, and artifacts, both stored and left behind, I consider public restrooms to be a reflection of both the creativity and impertinence of human nature when we think nobody else is watching.',
-    links: [
-      {
-        url: 'https://restroomarchive.com',
-        text: '↳ Explore the archive here',
-      },
-    ],
-  },
-  {
     //LANGUAGE OF MOVEMENT
     name: 'Language of Movement',
     date: '2024',
-    type: 'Art Exhibition',
+    type: 'Interactive exhibition',
     description:
       'Language of Movement by Milad Mozari was an exhibition on view from July 5, 2024 to February 22, 2025 at the Utah Museum of Contemporary Art in Salt Lake City, Utah. The gallery traced the evolving relationship between performance, technology, and cultural exchange through decades of archival material.',
     images: [
@@ -157,7 +134,7 @@ export default [
     //DECLATEL
     name: 'Where the Pieces Came From',
     date: '2024',
-    type: 'Concert visuals',
+    type: 'Audio-reactive concert visuals',
     description:
       "Where the Pieces Came From is the debut album for Kevin Hartley's solo project Declatel. For the official album release show, it was performed in its entirety at the historic Salt Lake City Masonic Temple on June 1, 2024, and was debuted to a live global audience via live stream on VIERLIVE on Jul 25, 2024.",
     video: {
@@ -203,40 +180,6 @@ export default [
       },
     ],
   },
-  {
-    //FABRICATED LANDSCAPES
-    name: 'Fabricated Landscapes',
-    date: '2024',
-    type: 'Book design',
-    description:
-      "Fabricated Landscapes is Ashton Reeder's debut book showcasing his photography and explores the technological transformations that shape megacities throughout Asia, with a focus on surveillance, density, digitization, and the relentless pace of change.",
-    video: {
-      mp4: require('@/assets/videos/demo-landscape.mp4'),
-      webm: require('@/assets/videos/demo-landscape.webm'),
-    },
-    images: [
-      {
-        src: require('@/assets/images/fabricated-landscapes/2.jpg'),
-        alt: 'Fabcricated Landscapes book',
-        caption: 'Fabcricated Landscapes book',
-      },
-      {
-        src: require('@/assets/images/fabricated-landscapes/fl-00.jpg'),
-        alt: 'Detail of Fabricated Landscapes with the insert designed by Jake Welch',
-        caption: 'Insert, detail',
-      },
-    ],
-    details:
-      'In collaboration with photographer, technologist, and researcher Ashton Reeder, a custom tool was designed and developed to take his photographs and reimagine them in a grid collage with each cell offset using noise and wave algorithms. The effect was designed to reflect the patterns common in city infrastructure and the rigid systems of surveillance and data that loom in the background.<br><br>Description of the book from Ashton Reeder\'s website:<br><br><i>"In his debut book, Ashton Reeder embarks on a journey through the evolving landscapes of Asia\'s megacities. The book delves into the rapid technological transformations that shape these urban giants, with a particular focus on surveillance, density, digitization, and the relentless pace of change. Capturing fleeting moments as they dissolve into the urban fabric, offering a glimpse into the environments that are continually being redefined by societal and technological progress.<br><br>Cities pictured: Istanbul, Turkiye; Tbilisi, Georgia; Baku, Azerbaijan; Dubai, U.A.E.; Abu Dhabi, U.A.E.; Manama, Bahrain; Bangkok, Thailand; Seoul, South Korea; Tokyo, Japan; Osaka, Japan; Hong Kong, Hong Kong; Shanghai, China"</i>',
-    links: [
-      // {
-      //   url: 'https://ashtonreeder.com/shop',
-      //   text: "↳ Buy Ashton's book here",
-      // },
-      { url: 'https://ashtonreeder.com/', text: "↳ See Ashton's other work" },
-    ],
-  },
-
   {
     //ADAPTABLE AURAS
     name: 'Adaptable Auras',

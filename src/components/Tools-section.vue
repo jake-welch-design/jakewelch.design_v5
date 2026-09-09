@@ -1,12 +1,12 @@
 <template>
-  <h2 id="tools">WEB TOOLS</h2>
-  <table>
+  <h2 id="tools">Tools</h2>
+  <table ref="table">
     <thead>
       <tr>
-        <th>NAME</th>
-        <th>YEAR</th>
-        <th>TYPE</th>
-        <th>DESCRIPTION</th>
+        <th>Year_</th>
+        <th>Name_</th>
+        <th>Type_</th>
+        <th>Description_</th>
       </tr>
     </thead>
     <tbody>
@@ -24,6 +24,10 @@
 <script>
   import Tools from './Tools.vue';
   import toolData from '@/data/tools.js';
+  import {
+    fitExpandedRow,
+    watchExpandedRow,
+  } from '@/utils/expandedRowHeight.js';
 
   export default {
     name: 'ToolsSection',
@@ -37,6 +41,10 @@
       };
     },
     mounted() {
+      // An expanded row is sized to the window, so it has to be re-sized
+      // whenever the window changes.
+      this.stopExpandedRowWatch = watchExpandedRow(() => this.$refs.table);
+
       // Check if the current route has a tool slug
       if (this.$route.params.toolSlug) {
         const toolSlug = this.$route.params.toolSlug;
@@ -49,10 +57,14 @@
 
           // Wait for DOM update before scrolling
           this.$nextTick(() => {
+            fitExpandedRow(this.$refs.table);
             this.scrollToTool();
           });
         }
       }
+    },
+    unmounted() {
+      this.stopExpandedRowWatch?.();
     },
     methods: {
       getToolSlug(toolName) {
@@ -76,13 +88,14 @@
 
           // Auto-scroll to position clicked row under navbar after DOM update
           this.$nextTick(() => {
+            fitExpandedRow(this.$refs.table);
             setTimeout(() => {
               // Find the clicked tool row
               const toolRows = document.querySelectorAll('.project-row');
               let clickedRow = null;
 
               toolRows.forEach((row) => {
-                const toolNameElement = row.children[0];
+                const toolNameElement = row.querySelector('.name-cell');
                 const toolNameText =
                   toolNameElement.textContent || toolNameElement.innerText;
                 const cleanToolName = this.clickedRow.replace(/<[^>]*>/g, '');
@@ -118,7 +131,7 @@
           let clickedRow = null;
 
           toolRows.forEach((row) => {
-            const toolNameElement = row.children[0];
+            const toolNameElement = row.querySelector('.name-cell');
             const toolNameText =
               toolNameElement.textContent || toolNameElement.innerText;
             const cleanToolName = this.clickedRow.replace(/<[^>]*>/g, '');
@@ -152,8 +165,9 @@
     margin-top: 1px;
     background-color: var(--h2-color-bg);
     color: var(--h2-color-text);
-    font-family: satoshiBold;
-    font-size: 18px;
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: 16px;
     text-align: left;
   }
 
@@ -168,8 +182,10 @@
 
   th {
     text-align: left;
-    font-family: satoshiBold;
-    font-size: 16px;
+    font-family: var(--font-sans);
+    /* Regular, matching the body rows; th defaults to bold. */
+    font-weight: 400;
+    font-size: 14px;
     padding: 0.5vw;
     padding-left: 1vw;
   }
@@ -177,6 +193,15 @@
   th:last-child,
   td:last-child {
     width: 50%;
+  }
+
+  /* YEAR leads the table at a width that hugs its four digits, measured in
+     JS so both tables agree. NAME and TYPE share what DESCRIPTION leaves.
+     Scoped to .project-row so an expanded row's cell, which is the first
+     child of its own row, keeps the full width. */
+  th:first-child,
+  table :deep(.project-row td:first-child) {
+    width: var(--year-col-width, 9ch);
   }
 
   tr:not(.exclude):not(:has(th)):hover
@@ -208,7 +233,8 @@
   }
 
   td {
-    font-family: satoshiRegular;
+    font-family: var(--font-sans);
+    font-weight: 400;
     font-size: 14px;
     padding: 0.5vw;
     padding-left: 1vw;
@@ -269,7 +295,8 @@
     }
 
     h2 {
-      font-size: 14px;
+      font-size: 12px;
+      padding: 8px 14px;
     }
 
     td,
@@ -277,6 +304,13 @@
     .project-text,
     .caption {
       font-size: 10px;
+      /* The vw padding collapses to a couple of px at this width, so the cells
+         are given real room in px instead, matching the ~14px gutter 1vw gives
+         the desktop layout. */
+      padding-top: 8px;
+      padding-bottom: 8px;
+      padding-left: 14px;
+      padding-right: 14px;
     }
 
     th,
@@ -287,20 +321,20 @@
       hyphens: auto;
     }
 
-    /* Collapse the YEAR and TYPE columns, splitting the table
-       evenly between NAME and DESCRIPTION. The td rules need :deep()
-       because the body cells are rendered by the Tools component. */
-    th:nth-child(2),
+    /* Collapse the YEAR and TYPE columns, leaving the table to NAME and
+       DESCRIPTION. The td rules need :deep() because the body cells are
+       rendered by the Tools component. */
+    th:first-child,
     th:nth-child(3),
-    table :deep(td:nth-child(2)),
-    table :deep(td:nth-child(3)) {
+    table :deep(.project-row td:first-child),
+    table :deep(.project-row td:nth-child(3)) {
       display: none;
     }
 
     /* Set from JS to the longest name across the projects and tools
        tables, so the two line up. DESCRIPTION takes the remainder. */
-    th:first-child,
-    table :deep(td:first-child) {
+    th:nth-child(2),
+    table :deep(.project-row td:nth-child(2)) {
       width: var(--name-col-width, 50%);
     }
 
@@ -308,7 +342,7 @@
        explicit width their sum falls short of the table, and fixed layout
        shares the leftover back out, re-inflating NAME to half. */
     th:last-child,
-    table :deep(td:last-child) {
+    table :deep(.project-row td:last-child) {
       width: auto;
     }
   }
