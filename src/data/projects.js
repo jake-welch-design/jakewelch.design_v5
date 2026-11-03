@@ -11,19 +11,11 @@ export default [
     },
     images: [],
     details:
-      '<a href="https://restroomarchive.com" target="_blank">The Restroom Archive</a> is an ongoing repository of publicly accessible restrooms. Now supporting a user base of more than 300 archivists and annotators, this archive aims to document the diverse qualities of these unique spaces. Everyone uses restrooms, yet as spaces, they are considered taboo and are rarely considered. Perhaps no space in society better captures the creativity and impertinence of humans when they know nobody else is watching.<br><br>The site was designed using the same conventions used for accessible public signage, and employs the same language found in web archives maintained by museums and libraries. The site’s navigation was built to encourage exploration and for users to make connections and observations. Users with accounts can click directly on restrooms to leave annotations and can request an upgrade to Archivist status to submit their own restroom scans for inclusion in the archive.',
+      '<a href="https://restroomarchive.com" target="_blank">The Restroom Archive</a> is an ongoing repository of publicly accessible restrooms. Now supporting a user base of more than 500 archivists and annotators, this archive aims to document the diverse qualities of these unique spaces. Everyone uses restrooms, yet as spaces, they are considered taboo and are rarely considered. Perhaps no space in society better captures the creativity and impertinence of humans when they know nobody else is watching.<br><br>The site was designed using the same conventions used for accessible public signage, and employs the same language found in web archives maintained by museums and libraries. The site’s navigation was built to encourage exploration and for users to make connections and observations. Users with accounts can click directly on restrooms to leave annotations and can request an upgrade to Archivist status to submit their own restroom scans for inclusion in the archive.<br><br>The Restroom Archive has been featured on <a href="https://www.404media.co/the-man-on-a-quest-to-digitally-preserve-americas-public-restrooms/" target="_blank">404 Media</a>, <a href="https://www.creativeapplications.net/news/the-restroom-archive/" target="_blank">Creative Applications Network</a>, EY Doberman’s <a href="https://doberman.co/3" target="_blank">“Three Things We\'ve Seen and Loved Lately” 26-030</a>, <a href="https://visla.kr/feature/352064/?ckattempt=1" target="_blank">VISLA Magazine</a>, <a href="https://www.asyncmuseum.com/works/the-restroom-archive" target="_blank">Async Museum</a>, <a href="https://www.pap-magazine.com/article/jake-welch-the-restroom-archive-3d-scan" target="_blank">PAP Magazine</a>, <a href="https://toiletgamestudies.org/interview_jake_welch" target="_blank">and Toilet Game Studies</a>.',
     links: [
       {
         url: 'https://restroomarchive.com',
         text: '↳ Explore the archive here',
-      },
-      {
-        url: 'https://www.404media.co/the-man-on-a-quest-to-digitally-preserve-americas-public-restrooms/',
-        text: '↳ Read my interview with 404 Media',
-      },
-      {
-        url: 'https://news.ycombinator.com/item?id=49517624',
-        text: '↳ Read the discussion about the Archive on Hacker News',
       },
     ],
   },
